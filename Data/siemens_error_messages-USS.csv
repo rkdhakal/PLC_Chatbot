@@ -1,0 +1,28 @@
+Category,Error code,Description,Remedy,Error type
+,16#0000,No error,‑,USS
+,16#8180,Length error in response of drive,Check the response frame of the drive.,USS
+,16#8181,Data type error,"Select a suitable data type.
+The following are valid:
+Real
+Word
+Double word",USS
+,16#8182,"Data type error: ""Double word"" or ""Real"" may not be returned for the ""Word"" request.",Check the response frame of the drive.,USS
+,16#8183,"Data type error: ""Word"" may not be returned for the ""Double word"" or ""Real"" request.",Check the response frame of the drive.,USS
+,16#8184,Checksum error in response of drive,Check the drive and the communication connection.,USS
+,16#8185,Addressing error,Valid drive address range: 1 to 16,USS
+,16#8186,Setpoint error,Valid setpoint range: -200% to +200%,USS
+,16#8187,Incorrect drive number returned,Check the response frame of the drive.,USS
+,16#8188,Invalid PZD length,"Permitted PZD lengths: 2, 4, 6, 8 words",USS
+,16#8189,The module does not support this data transmission rate.,Select a valid data transmission rate for the module.,USS
+,16#818A,A different request for this drive is currently active.,Repeat the parameter read or write command later.,USS
+,16#818B,The drive does not respond.,Check the drive.,USS
+,16#818C,The drive responds with an error message to a parameter request.,"Check the response frame of the drive.
+Check the parameter request.
+Check if the instructions USS_Read_Param, USS_Write_Param or USS_Port_Scan have reported an error. If they have, check the value of the static tag USS_DB. w_USSExtendedError of the USS_Drive_Control instruction.",USS
+,16#818D,The drive responds with an access error message to a parameter request.,"Check the response frame of the drive.
+Check the parameter request.",USS
+,16#818E,The drive was not initialized.,Check the user program and make sure that the USS_Drive_Control instruction is called for this drive.,USS
+,16#8280,Negative acknowledgment when reading module,"Check the input at the PORT parameter.
+You can find more detailed information on error causes in the static parameters Port_Config.RDREC.STATUS, Send_Config.RDREC.STATUS , Receive_Config.RDREC.STATUS , Send_P2P.RDREC.STATUS or Receive_P2P.RDREC.STATUS, and in the description of the SFB RDREC.",USS
+,16#8281,Negative acknowledgment when writing module,"Check the input at the PORT parameter.
+You can find more detailed information on error causes in the static parameters Port_Config.WRREC.STATUS, Send_Config.WRREC.STATUS , Receive_Config.WRREC.STATUS , Send_P2P.RDREC.STATUS or Receive_P2P.RDREC.STATUS, and in the description of the SFB WRREC.",USS

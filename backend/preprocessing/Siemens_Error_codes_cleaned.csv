@@ -1,0 +1,324 @@
+category,error_code,description,remedy,error_type
+,16#0000,No error,No Remedy,Modbus
+Configuration error of the interface - Modbus_Comm_Load,16#8181,The module does not support this data transmission rate.,Select a valid data transmission rate for the module at the BAUD parameter.,Modbus
+Configuration error of the interface - Modbus_Comm_Load,16#8182,The module does not support this parity setting.,"Select a suitable value for ""Parity"" at the PARITY parameter.
+The following are valid:
+None (1)
+Even (2)
+Odd (3)
+Mark (4)
+Space (5)
+Any (6)",Modbus
+Configuration error of the interface - Modbus_Comm_Load,16#8183,The module does not support this type of data flow control.,Select a valid data flow control for the module at the FLOW_CTRL parameter.,Modbus
+Configuration error of the interface - Modbus_Comm_Load,16#8184,"Invalid value for ""Response timeout"".","Select a suitable value for ""Response timeout"" at the RESP_TO parameter.
+Valid range of values: 1 to 65535 (ms)",Modbus
+Configuration error of the interface - Modbus_Comm_Load,16#8280,Negative acknowledgment when reading module,"Check the input at the PORT parameter.
+You can find more detailed information on error causes in the Send_Config.RDREC.STATUS or Receive_Config.RDREC.STATUS static parameters or RDREC.STATUS and in the description of the SFB RDREC.",Modbus
+Configuration error of the interface - Modbus_Comm_Load,16#8281,Negative acknowledgment when writing module,"Check the input at the PORT parameter.
+You can find more detailed information on error causes in the Send_Config.WRREC.STATUS or Receive_Config.WRREC.STATUS static parameters or WRREC.STATUS and in the description of the SFB WRREC.",Modbus
+Configuration error of the interface - Modbus_Comm_Load,16#8282,Module not available,Check the input at the PORT parameter and ensure that the module can be reached.,Modbus
+Configuration error - Modbus_Slave,16#8186,Invalid slave address,"Select a suitable slave address at the MB_ADDR parameter.
+The following are valid: 1-247 at standard address area;
+1-65535 at extended address area
+(0 is reserved for Broadcast)",Modbus
+Configuration error - Modbus_Slave,16#8187,Invalid value at MB_HOLD_REG parameter,Select a suitable value for the hold register at the MB_HOLD_REG parameter.,Modbus
+Configuration error - Modbus_Slave,16#8188,"Invalid operating mode or broadcast
+(MB_ADDR = 0) and MODE parameter ≠ 1","Select the value 1 for MODE in Broadcast mode or
+select a different operating mode.",Modbus
+Configuration error - Modbus_Slave,16#818C,The pointer to a MB_HOLD_REG area must be a data block or a bit memory address area.,Select a suitable value for the pointer to the MB_HOLD_REG area.,Modbus
+Configuration error - Modbus_Slave,16#8280,Negative acknowledgment when reading module,"Check the input at the PORT parameter.
+You can find more detailed information on error causes in the static parameters Send_P2P.RDREC.STATUS or Receive_P2P.RDREC.STATUS, and in the description of the SFB RDREC.",Modbus
+Configuration error - Modbus_Slave,16#8281,Negative acknowledgment when writing module,"Check the input at the PORT parameter.
+You can find more detailed information on error causes in the static parameters Send_P2P.WRREC.STATUS or Receive_P2P.WRREC.STATUS, and in the description of the SFB WRREC.",Modbus
+Configuration error - Modbus_Slave,16#8452 1),MB_HOLD_REG is not a pointer to a DB or a bit memory area,Check the MB_HOLD_REG pointer,Modbus
+Configuration error - Modbus_Slave,16#8453 1),MB_HOLD_REG is not a pointer of type BOOL or WORD,Check the MB_HOLD_REG pointer,Modbus
+Configuration error - Modbus_Slave,16#8454 1),"The area addressed by MB_HOLD_REG is longer than the DB, or the area addressed is too small for the number of data bytes to be read or written.",Check the MB_HOLD_REG pointer,Modbus
+Configuration error - Modbus_Slave,16#8455 1),MB_HOLD_REG points to a write-protected DB,Check the MB_HOLD_REG pointer,Modbus
+Configuration error - Modbus_Slave,16#8456 1),Error during instruction execution. The cause of the error is shown in the STATUS parameter.,"Determine the value of the SFCSTATUS parameter. Check what this means in the description for SFC51, STATUS parameter.",Modbus
+Configuration error - Modbus_Master,16#8180,Invalid value for MB_DB parameter,"The value configured for MB_DB (instance data DB) at the Modbus_Comm_Load instruction is not valid.
+Check the interconnection of the Modbus_Comm_Load instruction and its error messages.",Modbus
+Configuration error - Modbus_Master,16#8186,Invalid station address,"Select a suitable station address at the MB_ADDR parameter.
+The following are valid: 1-247 at standard address area;
+1-65535 at extended address area
+(0 is reserved for Broadcast)",Modbus
+Configuration error - Modbus_Master,16#8188,Invalid operating mode or broadcast (MB_ADDR = 0) and MODE parameter ≠ 1,Select the value 1 for MODE in Broadcast mode or select a different operating mode.,Modbus
+Configuration error - Modbus_Master,16#8189,Invalid data address,"Select a suitable value for the data address at the DATA_ADDR parameter.
+See description Modbus_Master in the Info system",Modbus
+Configuration error - Modbus_Master,16#818A,Invalid length,"Select a suitable data length at the DATA_LEN parameter.
+See description Modbus_Master in the Info system",Modbus
+Configuration error - Modbus_Master,16#818B,Invalid value for DATA_PTR,"Select a suitable value for the data pointer at the DATA_PTR parameter (M or DB address).
+See description Modbus_Master in the Info system",Modbus
+Configuration error - Modbus_Master,16#818C,Interconnection error of the DATA_PTR parameter,Check the interconnection of the instruction.,Modbus
+Configuration error - Modbus_Master,16#818D,"The area addressed by DATA_PTR is longer than the DB, or the area addressed is too small for the number of data bytes to be read or written.",Check the DATA_PTR pointer,Modbus
+Configuration error - Modbus_Master,16#8280,Negative acknowledgment when reading module,"Check the input at the PORT parameter.
+You can find more detailed information on error causes in the static parameters Send_P2P.RDREC.STATUS or Receive_P2P.RDREC.STATUS, and in the description of the SFB RDREC.",Modbus
+Configuration error - Modbus_Master,16#8281,Negative acknowledgment when writing module,"Check the input at the PORT parameter.
+You can find more detailed information on error causes in the static parameters Send_P2P.WRREC.STATUS or Receive_P2P.WRREC.STATUS or Receive_Reset and in the description of the SFB WRREC.",Modbus
+Communication errors - Modbus_Master and Modbus_Slave,16#80D1,The waiting time for XON or CTS = ON has expired.,"The communication partner has a fault, is too slow or is offline. Check the communication partner or change the parameters, if necessary.",Modbus
+Communication errors - Modbus_Master and Modbus_Slave,16#80D2,"""Hardware RTS always ON"": Send job canceled due to change from DSR = ON to OFF",Check the communication partner. Make sure that DSR is ON for the entire duration of transmission.,Modbus
+Communication errors - Modbus_Master and Modbus_Slave,16#80E0,Frame aborted: Send buffer overflow / send frame too long,In the user program call the instruction more often or configure a communication with data flow control.,Modbus
+Communication errors - Modbus_Master and Modbus_Slave,16#80E1,Frame aborted: Parity error,"Check the connection line of the communication partners, or verify that the same data transmission rate, parity and stop bit number are configured for both devices.",Modbus
+Communication errors - Modbus_Master and Modbus_Slave,16#80E2,Frame aborted: Character frame error,"Check the settings for start bit, data bits, parity bit, data transmission rate, and stop bit(s).",Modbus
+Communication errors - Modbus_Master and Modbus_Slave,16#80E3,Frame aborted: Character overflow error,Check the number of data in the frame of the communication partner.,Modbus
+Communication errors - Modbus_Master and Modbus_Slave,16#80E4,Frame aborted: Maximum frame length reached,"Select a shorter frame length at the communication partner.
+The following are valid (depending on the module): 1 to 1024/2048/4096 (bytes)",Modbus
+Communication error - Modbus_Master,16#80C8,The slave does not respond within the set time,"Check the data transmission rate, parity and wiring of the slave.",Modbus
+Communication error - Modbus_Master,16#80C9,The slave does not respond within the time set by Blocked_Proc_Timeout.,"Check the setting for Blocked_Proc_Timeout.
+Check if the module has been configured with the Modbus_Comm_Load instruction. The module may possibly need to be reconfigured using Modbus_Comm_Load after a pull/plug or after voltage recovery.",Modbus
+Communication error - Modbus_Master,16#8200,The interface is busy with an ongoing request.,Repeat the command later. Make sure that there are no commands still running before you start a new one.,Modbus
+Protocol error - Modbus_Slave (only communication modules that support Modbus),16#8380,CRC error,Checksum error of the Modbus frame. Check the communication partner.,Modbus
+Protocol error - Modbus_Slave (only communication modules that support Modbus),16#8381,The function code is not supported or is not supported for broadcast.,Check the communication partner and make sure that a valid function code is sent.,Modbus
+Protocol error - Modbus_Slave (only communication modules that support Modbus),16#8382,Invalid length information in the request frame,Select a suitable data length at the DATA_LEN parameter.,Modbus
+Protocol error - Modbus_Slave (only communication modules that support Modbus),16#8383,Invalid data address in the request frame,Select a suitable value for the data address at the DATA_ADDR parameter.,Modbus
+Protocol error - Modbus_Slave (only communication modules that support Modbus),16#8384,Invalid data value error in the request frame,Check the data value in the request frame of the Modbus master,Modbus
+Protocol error - Modbus_Slave (only communication modules that support Modbus),16#8385,The diagnostic value is not supported by the Modbus slave (function code 08),The Modbus slave only supports the diagnostic values 16#0000 and 16#000A.,Modbus
+Protocol error - Modbus_Master (only communication modules that support Modbus),16#8380,CRC error,Checksum error of the Modbus frame. Check the communication partner.,Modbus
+Protocol error - Modbus_Master (only communication modules that support Modbus),16#8381,Response frame from Modbus Slave with the following error message: The function code is not supported.,Check the communication partner and make sure that a valid function code is sent.,Modbus
+Protocol error - Modbus_Master (only communication modules that support Modbus),16#8382,Response frame from Modbus Slave with the following error message: Invalid length,Select a suitable data length.,Modbus
+Protocol error - Modbus_Master (only communication modules that support Modbus),16#8383,Response frame from Modbus Slave with the following error message: Invalid data address in the request frame,Select a suitable value for the data address at the DATA_ADDR parameter.,Modbus
+Protocol error - Modbus_Master (only communication modules that support Modbus),16#8384,Response frame from Modbus Slave with the following error message: Data value error,Check the request frame to the Modbus slave.,Modbus
+Protocol error - Modbus_Master (only communication modules that support Modbus),16#8385,Response frame from Modbus Slave with the following error message: The diagnostic value is not supported by the Modbus slave,The Modbus slave only supports the diagnostic values 16#0000 and 16#000A.,Modbus
+Protocol error - Modbus_Master (only communication modules that support Modbus),16#8386,The returned function code does not match the requested function code.,Check the response frame and the addressing of the slave.,Modbus
+Protocol error - Modbus_Master (only communication modules that support Modbus),16#8387,A slave that was not requested answers,Check the response frame of the slave. Check the address settings of the slave.,Modbus
+Protocol error - Modbus_Master (only communication modules that support Modbus),16#8388,Error in the response of the slave to a write request.,Check the response frame of the slave.,Modbus
+Protocol error - Modbus_Master (only communication modules that support Modbus),16#8828 1),DATA_PTR points to a bit address that is not equal to n * 8,Check the DATA_PTR pointer,Modbus
+Protocol error - Modbus_Master (only communication modules that support Modbus),16#8852 1),DATA_PTR is not a pointer to a DB or a bit memory area,Check the DATA_PTR pointer,Modbus
+Protocol error - Modbus_Master (only communication modules that support Modbus),16#8853 1),DATA_PTR is not a pointer of type BOOL or WORD,Check the DATA_PTR pointer,Modbus
+Protocol error - Modbus_Master (only communication modules that support Modbus),16#8855 1),DATA_PTR points to a write-protected DB,Check the DATA_PTR pointer,Modbus
+Protocol error - Modbus_Master (only communication modules that support Modbus),16#8856 1),Error during call of SFC51,Call the Modbus_Master instruction again,Modbus
+Error - Modbus_Slave (only communication modules that support Modbus),16#8428 1),MB_HOLD_REG points to a bit address that is not equal to n * 8,Check the MB_HOLD_REG pointer,Modbus
+Error - Modbus_Slave (only communication modules that support Modbus),16#8452 1),MB_HOLD_REG is not a pointer to a DB or a bit memory area,Check the MB_HOLD_REG pointer,Modbus
+Error - Modbus_Slave (only communication modules that support Modbus),16#8453 1),MB_HOLD_REG is not a pointer of type BOOL or WORD,Check the MB_HOLD_REG pointer,Modbus
+Error - Modbus_Slave (only communication modules that support Modbus),16#8454 1),"The area addressed by MB_HOLD_REG is longer than the DB, or the area addressed is too small for the number of data bytes to be read or written.",Check the MB_HOLD_REG pointer,Modbus
+Error - Modbus_Slave (only communication modules that support Modbus),16#8455 1),MB_HOLD_REG points to a write-protected DB,Check the MB_HOLD_REG pointer,Modbus
+Error - Modbus_Slave (only communication modules that support Modbus),16#8456 1),Error during call of SFC51,Call the Modbus_Slave instruction again,Modbus
+,16#0000,No error,No Remedy,PtP
+RECEIVE status and error codes,16#0094,"frame end identified based on the ""Receipt of fixed/maximum frame length""",No Remedy,PtP
+RECEIVE status and error codes,16#0095,"frame end identified based on ""Message timeout""",No Remedy,PtP
+RECEIVE status and error codes,16#0096,"frame end identified based on expiration of the ""Character delay time""",No Remedy,PtP
+RECEIVE status and error codes,16#0097,The frame was aborted because the maximum response time was reached.,No Remedy,PtP
+RECEIVE status and error codes,16#0098,"frame end identified based on the fulfillment of the ""Read message length from message"" conditions",No Remedy,PtP
+RECEIVE status and error codes,16#0099,"frame end identified based on the receipt of the ""End sequence""",No Remedy,PtP
+SEND status and error codes,16#7000,Block idle,No Remedy,PtP
+SEND status and error codes,16#7001,Initial call for a new frame: Data transmission initiated,No Remedy,PtP
+SEND status and error codes,16#7002,Interim call: Data transmission running,No Remedy,PtP
+SEND status and error codes,16#8085,Invalid length,"Select a suitable frame length.
+The following are valid (depending on the module):
+1-1024/2048/4096 (Byte)",PtP
+SEND status and error codes,16#8088,"The specified length exceeds the range set in the receive buffer.
+Note: If the data type STRING has been specified at the BUFFER parameter, this error code also appears if the current string is shorter than the length specified at the LENGTH parameter.","Change the range in the receive buffer or select a frame length which corresponds to the range set in the receive buffer.
+The following are valid (depending on the module):
+1-1024/2048/4096 (bytes)",PtP
+SEND status and error codes,16#8090,Configuration error: Odd number of bytes for WString,Select an even number of bytes.,PtP
+RECEIVE status and error codes,16#8088,The number of characters received exceeds the number specified at the BUFFER parameter.,"Select a suitable frame length.
+The following are valid (depending on the module):
+1-1024/2048/4096 (bytes)",PtP
+RECEIVE status and error codes,16#8090,Configuration error: Odd number of bytes for WString,Select an even number of bytes.,PtP
+Error message codes of the special functions,16#818F,Incorrect parameter number setting (with USS only),"Select a suitable parameter number (PARAM).
+The following numbers are valid: 0-2047",PtP
+Error message codes of the special functions,16#8190,Incorrect setting of the CRC calculation,"Select a suitable value for the CRC calculation.
+The following are valid: deactivated or activated.
+Check whether the module addressed supports CRC calculation.",PtP
+Error message codes of the special functions,16#8191,Incorrect setting of the diagnostic error interrupt,"Select a suitable value for ""Diagnostic error interrupt"".
+The following are valid: Diagnostic error interrupt deactivated or diagnostic error interrupt activated.
+Check whether the module addressed supports the generation of diagnostic interrupts.",PtP
+"Error message codes of the ""Port configuration""",16#81A0,The module does not support this protocol.,Select a valid protocol for the module (PROTOCOL).,PtP
+"Error message codes of the ""Port configuration""",16#81A1,The module does not support this data transmission rate.,Select a valid data transmission rate for the module (BAUD).,PtP
+"Error message codes of the ""Port configuration""",16#81A2,The module does not support this parity setting.,"Select a suitable value for ""Parity"" (PARITY).
+The following are valid:
+None (1)
+Even (2)
+Odd (3)
+Mark (4)
+Space (5)
+Any (6)",PtP
+"Error message codes of the ""Port configuration""",16#81A3,The module does not support this number of data bits.,"Select a suitable value for ""Number of data bits"" (DATABITS).
+The following are valid:
+7 (2)
+8 (1)",PtP
+"Error message codes of the ""Port configuration""",16#81A4,The module does not support this number of stop bits.,"Select a suitable value for ""Number of stop bits"" (STOPBITS).
+The following are valid:
+1 (1)
+2 (2)",PtP
+"Error message codes of the ""Port configuration""",16#81A5,The module does not support this type of data flow control.,Select a valid data flow control for the module (FLOWCTRL).,PtP
+"Error message codes of the ""Port configuration""",16#81A7,Invalid value for XON or XOFF,"Select suitable values for XON (XONCHAR) and XOFF (XOFFCHAR).
+Valid range of values: 0...255",PtP
+"Error message codes of the ""Port configuration""",16#81AA,Invalid operating mode,"Valid operating modes are:
+Full duplex (RS232) (0)
+Full duplex (RS422) four-wire mode (point-to-point) (1) / (CM PtP (ET 200SP))
+Full duplex (RS422) four-wire mode (multipoint master) (2)/ (CM PtP (ET 200SP))
+Full duplex (RS 422) four-wire mode (multipoint slave) (3)
+Half duplex (RS485) two-wire mode. (4)",PtP
+"Error message codes of the ""Port configuration""",16#81AB,Invalid receive line initial state,"Valid initial states are:
+""No"" default setting (0)
+Signal R(A)=5 V, signal R(B)=0 V (break detection) (1):
+Can only be selected with: ""Full duplex (RS422) four-wire mode (point-to-point connection)"" and ""Full duplex (RS422) four-wire mode (multipoint slave)"".
+Signal R(A)=0 V, signal R(B)=5 V (2): This default setting corresponds to the idle state (no active send operation).",PtP
+"Error message codes of the ""Port configuration""",16#81AC,"Invalid value for ""Break detection""","Select a suitable value for ""Break detection"". The following are valid:
+Break detection deactivated (0)
+Break detection activated (1).",PtP
+"Error message codes of the ""Port configuration""",16#81AF,The module does not support this protocol.,Select a valid protocol for the module.,PtP
+"Error codes of the ""Send configuration""",16#81B5,"More than two end delimiters or
+end sequence > 5 characters","Select suitable values for ""End delimiter"" and ""End sequence"".
+The following are valid:
+deactivated (0),
+1 (1) or 2 (2) end delimiters
+or
+deactivated (0),
+1 (1) up to 5 (5) characters for the end sequence.",PtP
+"Error codes of the ""Send configuration""",16#81B6,Send configuration rejected because the 3964(R) protocol was selected,Make sure that no send configuration is transmitted if the 3964(R) protocol is set.,PtP
+"Error codes of the ""Receive configuration""",16#81C0,Invalid start condition,"Select a suitable start condition.
+The following are valid:
+Send break before frame start
+Send Idle Line.",PtP
+"Error codes of the ""Receive configuration""",16#81C1,Invalid end condition or no end condition selected,Select a suitable end condition (see Receiving data with Freeport (S7-1500)).,PtP
+"Error codes of the ""Receive configuration""",16#81C3,"Invalid value for ""Maximum message length""","Select a suitable value for ""Maximum message length"" (MAXLEN).
+Valid range of values (depending on the module): 1-1024/2048/4096 (Byte)",PtP
+"Error codes of the ""Receive configuration""",16#81C4,"Invalid value for ""Offset of the length specification in the message""","Select a suitable value for ""Offset of the length specification in the message"".
+Valid range of values (depending on the module): 1-1024/2048/4096 (Byte)",PtP
+"Error codes of the ""Receive configuration""",16#81C5,"Invalid value for ""Size of length field""","Select a suitable value for ""Size of length field"" (LENGTHSIZE).
+Valid range of values in bytes:
+1 (1)
+2 (2)
+4 (4)",PtP
+"Error codes of the ""Receive configuration""",16#81C6,"Invalid value for ""Number of characters not counted in length specification""","Select a suitable value for ""Number of characters not counted in length specification"" (LENGTHM).
+Valid range of values: 0 to 255 (bytes)",PtP
+"Error codes of the ""Receive configuration""",16#81C7,"The total of ""Offset in the message + size of length field + number of characters not counted"" is greater than the maximum frame length","Select a suitable value for ""Offset in message"", ""Size of length field"" and ""Number of characters not counted"".
+Valid range of values:
+Offset in the message (depending on the module):
+0-1024/2048/4096 (bytes)
+Size of length field: 1, 2, or 4 (bytes)
+Number of characters not counted: 0 to 255 (bytes)",PtP
+"Error codes of the ""Receive configuration""",16#81C8,"Invalid value for ""Response timeout""","Select a suitable value for ""Response timeout"".
+Valid range of values: 1-65535 (ms)",PtP
+"Error codes of the ""Receive configuration""",16#81C9,"Invalid value for ""Character delay time""","Select a suitable value for ""Character delay time"".
+Valid range of values: 1 to 65535 (bit times)",PtP
+"Error codes of the ""Receive configuration""",16#81CB,"frame end sequence is activated, but no character is activated for the check",Activate one or several characters for the check.,PtP
+"Error codes of the ""Receive configuration""",16#81CC,"frame start sequence is activated, but no character is activated for the check",Activate one or several characters for the check.,PtP
+"Error codes of the ""Receive configuration""",16#81CD,"Invalid value for ""Prevent overwriting""","Select a suitable value for ""Prevent overwriting"".
+The following are valid:
+Prevent overwriting is deactivated (0) or
+Prevent overwriting is activated (1)",PtP
+"Error codes of the ""Receive configuration""",16#81CE,"Invalid value for ""Clear receive buffer on startup""","Select a suitable value for ""Clear receive buffer on startup"".
+The following are valid:
+Clear receive buffer at startup is deactivated (0)
+Clear receive buffer at startup is activated (1)",PtP
+SEND status and error codes,16#81D0,Receiving send request during runtime of a send command,Make sure that you do not receive an additional send request during runtime of a send command.,PtP
+SEND status and error codes,16#81D1,The waiting time for XON or CTS = ON has expired.,"The communication partner has a fault, is too slow or is offline. Check the communication partner or change the parameters, if necessary.",PtP
+SEND status and error codes,16#81D2,"""Hardware RTS always ON"": Send job canceled due to change from DSR = ON to OFF",Check the communication partner. Make sure that DSR is ON for the entire duration of transmission.,PtP
+SEND status and error codes,16#81D3,Send buffer overflow / send frame too long,"Select a shorter frame length.
+The following are valid (depending on the module): 1 to 1024/2048/4096 (bytes)",PtP
+SEND status and error codes,16#81D5,"Transmission canceled due to parameter changes, detected wire break, or CPU in STOP","Check the parameter assignment, wire break, and CPU status.",PtP
+SEND status and error codes,16#81D6,Transmission canceled because end identifier was not received,Check the parameter assignment of the end characters and the frame of the communication partner.,PtP
+SEND status and error codes,16#81D7,Communication error between the user program and module,"Check the communication (e.g., matching the sequence number).",PtP
+SEND status and error codes,16#81D8,Transmission attempt rejected because module is not configured,Configure the module.,PtP
+Error codes of the receive configuration,16#81E0,Frame aborted: Send buffer overflow / send frame too long,Increase the call rate for the receive function in the user program or configure communication with data flow control.,PtP
+Error codes of the receive configuration,16#81E1,Frame aborted: Parity error,"Check the connection line of the communication partners, or verify that the same data transmission rate, parity and stop bit number are configured for both devices.",PtP
+Error codes of the receive configuration,16#81E2,Frame aborted: Character frame error,"Check the settings for start bit, data bits, parity bit, data transmission rate, and stop bit(s).",PtP
+Error codes of the receive configuration,16#81E3,Frame aborted: Character overflow error,Firmware error: Please contact Customer Support.,PtP
+Error codes of the receive configuration,16#81E4,"Frame aborted: The total length of ""Offset in the message + size of the length field + number of characters not counted"" is greater than the receive buffer","Select a suitable value for offset in message, size of the length field, and number of characters not counted.",PtP
+Error codes of the receive configuration,16#81E5,Frame aborted: Break,"Receive line to partner is interrupted.
+Reconnect or switch on partner.",PtP
+Error codes of the receive configuration,16#81E6,"Maximum number of ""Buffered received frames"" exceeded",In the user program call the instruction more often or configure a communication with data flow control or increase the number of buffered frames.,PtP
+Error codes of the receive configuration,16#81E7,Synchronization error module and Receive_P2P,Make sure that different instances of the Receive_P2P do not access the same module.,PtP
+Error codes of the receive configuration,16#81E8,Frame aborted: The character delay time has expired before the message end criterion was detected,"Partner device faulty or too slow. Check this, if required, using an interface tester that is interconnected in the transmission line.",PtP
+Error codes of the receive configuration,16#81E9,Modbus CRC error (only communication modules which support Modbus),Checksum error of the Modbus frame. Check the communication partner.,PtP
+Error codes of the receive configuration,16#81EA,Modbus frame too short (only communication modules which support Modbus),Minimum length of Modbus frame not met. Check the communication partner.,PtP
+Error codes of the receive configuration,16#81EB,Frame aborted: Maximum frame length reached,"Select a shorter frame length at the communication partner.
+The following are valid (depending on the module): 1-1024/2048/4096 (bytes)
+Check the parameters for end of frame detection.",PtP
+Error codes V24 accompanying signals,16#81F0,The module does not support V24 accompanying signals,You have tried to set accompanying signals for a module that does not support V24 accompanying signals. Make sure that this is an RS232 module or that RS232 mode (ET 200SP) is set.,PtP
+Error codes V24 accompanying signals,16#81F1,No operation of the V24 accompanying signals,The V24 accompanying signals cannot be operated manually if hardware data flow control is active.,PtP
+Error codes V24 accompanying signals,16#81F2,The DSR signal cannot be set because the module has the type DTE.,"Check the configured type of the module.
+The module type must be DCE (data communication equipment).",PtP
+Error codes V24 accompanying signals,16#81F3,The DTR signal cannot be set because the module has the type DCE.,"Check the configured type of the module.
+The module type must be DTE (data terminal equipment).",PtP
+Error codes V24 accompanying signals,16#81F4,Block header error (e.g. incorrect block type or incorrect block length),Check the instance DB and the block header.,PtP
+Error codes of the receive configuration,16#8201 1),Receive_Conditions is a pointer to an invalid data type,"Enter a pointer to one of the following data types:
+DB, BOOL, BYTE, CHAR, WORD, INT, DWORD, DINT, REAL, DATE, TIME_OF_DAY, TIME, S5TIME, DATE_AND_TIME, STRING",PtP
+Error codes of the receive configuration,16#8225,"Receive_Conditionspoints to an optimized memory area greater than 1 kB
+or
+Receive_Conditions points to an optimized memory area and the receive length is greater than the area addressed by Receive_Conditions.","Enter a pointer to an area with a maximum length of:
+Optimized memory area: 1 KB
+Non-optimized memory area: 4 KB
+Note: If the pointer points to an optimized memory area, do not send more than 1 KB.",PtP
+Error codes of the receive configuration,16#8229 1),Receive_Conditions is a pointer to BOOL with a number of bits not equal to n * 8,"If you are using a pointer to BOOL, the number of bits must be a multiple of 8.",PtP
+"Error codes, general",16#8280,Negative acknowledgment when reading module,"You can find more detailed information on error causes in theRDREC.STATUS static parameters and in the description of the SFB RDREC.
+Check the input at the PORT parameter
+Set the COM_RST parameter prior to the initial call.",PtP
+"Error codes, general",16#8281,Negative acknowledgment when writing module,"Check the input at the PORT parameter
+You can find more detailed information on error causes in the WRREC.STATUS static parameters and in the description of the SFB WRREC.",PtP
+"Error codes, general",16#8282,Module not available,Check the input at the PORT parameter and ensure that the module can be reached.,PtP
+Error codes of the receive configuration,16#82C1,"Invalid value for ""Buffered received frames"".","Select a suitable value for ""Buffered received frames"".
+Valid range of values: 1-255",PtP
+Error codes of the receive configuration,16#82C2,Receive configuration rejected because the 3964(R) protocol was selected,Make sure that no receive configuration is sent if the 3964(R) protocol is set.,PtP
+Error codes of the receive configuration,16#8301 1),Receive_Conditions is a pointer to an invalid data type,"Select a valid data type.
+The following are valid: DB, BOOL, BYTE, CHAR, WORD, INT, DWORD, DINT, REAL, DATE, TIME_OF_DAY, TIME, S5TIME, DATE_AND_TIME, STRING",PtP
+Error codes of the receive configuration,16#8322,Range length error when reading a parameter,Check the input at the Receive_Conditions parameter,PtP
+Error codes of the receive configuration,16#8324,Range error when reading a parameter,Check the input at the Receive_Conditions parameter,PtP
+Error codes of the receive configuration,16#8328,Setting error when reading a parameter,Check the input at the Receive_Conditions parameter,PtP
+SEND status and error codes,16#8328 1),BUFFER is a pointer to BOOL with a number of bits not equal to n * 8,"If you are using a pointer to BOOL, the number of bits must be a multiple of 8.",PtP
+Error codes of the receive configuration,16#8332,Invalid data block at the Receive_Conditions parameter,Check the input at the Receive_Conditions parameter,PtP
+Error codes of the receive configuration,16#833A,The designation of the data block at the Receive_Conditions parameter refers to a data block which is not loaded.,Check the input at the Receive_Conditions parameter,PtP
+Error codes of the receive configuration,16#8351,Invalid data type,Check the input at the Receive_Conditions parameter,PtP
+Error codes of the receive configuration,16#8352 1),Receive_Conditions does not point to a data block,Check the pointer to Receive_Conditions,PtP
+Error codes of the receive configuration,16#8353 1),Receive_Conditions does not point to a structure of the typeReceive_Conditions,Check the pointer to Receive_Conditions,PtP
+Error codes 3964(R) protocol,16#8380,"Parameter assignment error: Invalid value for ""Character delay time"".","Select a suitable value for ""Character delay time"" (CharacterDelayTime).
+Valid range of values: 1 to 65535 (ms)",PtP
+Error codes 3964(R) protocol,16#8381,"Parameter assignment error: Invalid value for ""Response timeout"".","Select a suitable value for ""Response timeout"" (AcknDelayTime).
+Valid range of values: 1 to 65535 (ms)",PtP
+Error codes 3964(R) protocol,16#8382,"Parameter assignment error: Invalid value for ""Priority"".","Select a suitable value for ""Priority"" (Priority).
+The following are valid:
+High (1)
+Low (0)",PtP
+Error codes 3964(R) protocol,16#8383,"Parameter assignment error: Invalid value for ""Block check""","Select a suitable value for ""Block check"" (BCC).
+The following are valid:
+With block check (1)
+Without block check (0)",PtP
+Error codes 3964(R) protocol,16#8384,"Parameter assignment error: Invalid value for ""Connection attempts"".","Select a suitable value for ""Connection attempts"" (BuildupAttempts).
+Valid range of values: 1-255",PtP
+Error codes 3964(R) protocol,16#8385,"Parameter assignment error: Invalid value for ""Transmission attempts"".","Select a suitable value for ""Transmission attempts"" (RepetitionAttempts).
+Valid range of values: 1-255",PtP
+Error codes 3964(R) protocol,16#8386,Runtime error: Number of connection attempts exceeded,"Check the interface cable and the transmission parameters.
+Also check whether the receive function is configured correctly at the partner device.",PtP
+Error codes 3964(R) protocol,16#8387,Runtime error: Number of transmission attempts exceeded,"Check the interface cable, the transmission parameters and the configuration of the communication partner.",PtP
+Error codes 3964(R) protocol,16#8388,"Runtime error: Error at the ""Block check character""
+The internally calculated value of the block check character does not correspond to the block check character received by the partner at the connection end.","Check whether the connection is seriously disrupted; in this case you may also occasionally see error codes. Check for proper function at the partner device, possibly by using an interface test device that is switched into the transmission line.",PtP
+Error codes 3964(R) protocol,16#8389,Runtime error: Invalid character received while waiting for free receive buffer,"The send request of the communication partner (STX, 02H) is only answered with DLE when the receive buffer is empty. No additional character may be received before (except STX again).
+Check for proper function at the partner device, possibly by using an interface test device that is switched into the transmission line.",PtP
+Error codes 3964(R) protocol,16#838A,"Runtime error: Logical error during receiving.
+After DLE was received, a further random character (other than DLE or ETX) was received.","Check if partner DLE in frame header and in data string is always in duplicate or the connection is released with DLE ETX. Check for proper function at the partner device, possibly by using an interface test device that is switched into the transmission line.",PtP
+Error codes 3964(R) protocol,16#838B,Runtime error: Character delay time exceeded,"Partner device too slow or faulty.
+Verify by using an interface test device that is switched into the transmission line, if necessary.",PtP
+Error codes 3964(R) protocol,16#838C,Runtime error: Wait time for free receive buffer has started,In the user program call the instruction more often or configure a communication with data flow control.,PtP
+Error codes 3964(R) protocol,16#838D,Runtime error: frame repetition does not start within 4 s after NAK,Check the communication partner. A received frame that is possibly corrupted must be repeated by the partner within 4 seconds.,PtP
+Error codes 3964(R) protocol,16#838E,"Runtime error: In idle mode, one or several characters (other than NAK or STX) were received.","Check for proper function of the partner device, possibly using an interface test device that is switched into the transmission line.",PtP
+Error codes 3964(R) protocol,16#838F,Runtime error: Initialization conflict - Both partners have set high priority,"Set the ""Low"" priority at one of the partners",PtP
+Error codes 3964(R) protocol,16#8391,Parameter assignment error: 3964 configuration data rejected because Freeport is set,"If the Freeport protocol is set, make sure that no 3964 parameter assignment data is sent.",PtP
+,16#0000,No error,‑,USS
+,16#8180,Length error in response of drive,Check the response frame of the drive.,USS
+,16#8181,Data type error,"Select a suitable data type.
+The following are valid:
+Real
+Word
+Double word",USS
+,16#8182,"Data type error: ""Double word"" or ""Real"" may not be returned for the ""Word"" request.",Check the response frame of the drive.,USS
+,16#8183,"Data type error: ""Word"" may not be returned for the ""Double word"" or ""Real"" request.",Check the response frame of the drive.,USS
+,16#8184,Checksum error in response of drive,Check the drive and the communication connection.,USS
+,16#8185,Addressing error,Valid drive address range: 1 to 16,USS
+,16#8186,Setpoint error,Valid setpoint range: -200% to +200%,USS
+,16#8187,Incorrect drive number returned,Check the response frame of the drive.,USS
+,16#8188,Invalid PZD length,"Permitted PZD lengths: 2, 4, 6, 8 words",USS
+,16#8189,The module does not support this data transmission rate.,Select a valid data transmission rate for the module.,USS
+,16#818A,A different request for this drive is currently active.,Repeat the parameter read or write command later.,USS
+,16#818B,The drive does not respond.,Check the drive.,USS
+,16#818C,The drive responds with an error message to a parameter request.,"Check the response frame of the drive.
+Check the parameter request.
+Check if the instructions USS_Read_Param, USS_Write_Param or USS_Port_Scan have reported an error. If they have, check the value of the static tag USS_DB. w_USSExtendedError of the USS_Drive_Control instruction.",USS
+,16#818D,The drive responds with an access error message to a parameter request.,"Check the response frame of the drive.
+Check the parameter request.",USS
+,16#818E,The drive was not initialized.,Check the user program and make sure that the USS_Drive_Control instruction is called for this drive.,USS
+,16#8280,Negative acknowledgment when reading module,"Check the input at the PORT parameter.
+You can find more detailed information on error causes in the static parameters Port_Config.RDREC.STATUS, Send_Config.RDREC.STATUS , Receive_Config.RDREC.STATUS , Send_P2P.RDREC.STATUS or Receive_P2P.RDREC.STATUS, and in the description of the SFB RDREC.",USS
+,16#8281,Negative acknowledgment when writing module,"Check the input at the PORT parameter.
+You can find more detailed information on error causes in the static parameters Port_Config.WRREC.STATUS, Send_Config.WRREC.STATUS , Receive_Config.WRREC.STATUS , Send_P2P.RDREC.STATUS or Receive_P2P.RDREC.STATUS, and in the description of the SFB WRREC.",USS

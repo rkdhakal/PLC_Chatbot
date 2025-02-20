@@ -21,14 +21,14 @@ driver.get('https://support.industry.siemens.com/cs/mdm/109742272?c=85937913867&
 try:
     # Locate the table body
     table_body = WebDriverWait(driver, 20).until(
-        EC.presence_of_element_located((By.XPATH, '/html/body/div[1]/div/div/div[4]/div/div/div[1]/div[1]/div[1]/div[3]/div/div[2]/div[4]/div/div/div[2]/div[2]/table/tbody'))
+        EC.presence_of_element_located((By.XPATH, '/html/body/div[1]/div/div/div[4]/div/div/div[1]/div[1]/div[1]/div[3]/div/div[2]/div[4]/div/div/div[2]/div[4]/table/tbody'))
     )
     
     table_rows = table_body.find_elements(By.TAG_NAME, "tr")
     print(f"Found {len(table_rows)} rows in the table.")
 
     # Open CSV file
-    with open("siemens_error_codes.csv", "w", newline="", encoding="utf-8") as file:
+    with open("siemens_error_messages-USS.csv", "w", newline="", encoding="utf-8") as file:
         writer = csv.writer(file)
 
         # Write header row

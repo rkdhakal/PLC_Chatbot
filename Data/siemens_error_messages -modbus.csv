@@ -1,0 +1,94 @@
+Category,Error Code,Description,Remedy,Error type
+,16#0000,No error,‑,Modbus
+Configuration error of the interface - Modbus_Comm_Load,16#8181,The module does not support this data transmission rate.,Select a valid data transmission rate for the module at the BAUD parameter.,Modbus
+Configuration error of the interface - Modbus_Comm_Load,16#8182,The module does not support this parity setting.,"Select a suitable value for ""Parity"" at the PARITY parameter.
+The following are valid:
+None (1)
+Even (2)
+Odd (3)
+Mark (4)
+Space (5)
+Any (6)",Modbus
+Configuration error of the interface - Modbus_Comm_Load,16#8183,The module does not support this type of data flow control.,Select a valid data flow control for the module at the FLOW_CTRL parameter.,Modbus
+Configuration error of the interface - Modbus_Comm_Load,16#8184,"Invalid value for ""Response timeout"".","Select a suitable value for ""Response timeout"" at the RESP_TO parameter.
+Valid range of values: 1 to 65535 (ms)",Modbus
+Configuration error of the interface - Modbus_Comm_Load,16#8280,Negative acknowledgment when reading module,"Check the input at the PORT parameter.
+You can find more detailed information on error causes in the Send_Config.RDREC.STATUS or Receive_Config.RDREC.STATUS static parameters or RDREC.STATUS and in the description of the SFB RDREC.",Modbus
+Configuration error of the interface - Modbus_Comm_Load,16#8281,Negative acknowledgment when writing module,"Check the input at the PORT parameter.
+You can find more detailed information on error causes in the Send_Config.WRREC.STATUS or Receive_Config.WRREC.STATUS static parameters or WRREC.STATUS and in the description of the SFB WRREC.",Modbus
+Configuration error of the interface - Modbus_Comm_Load,16#8282,Module not available,Check the input at the PORT parameter and ensure that the module can be reached.,Modbus
+Configuration error - Modbus_Slave,16#8186,Invalid slave address,"Select a suitable slave address at the MB_ADDR parameter.
+The following are valid: 1-247 at standard address area;
+1-65535 at extended address area
+(0 is reserved for Broadcast)",Modbus
+Configuration error - Modbus_Slave,16#8187,Invalid value at MB_HOLD_REG parameter,Select a suitable value for the hold register at the MB_HOLD_REG parameter.,Modbus
+Configuration error - Modbus_Slave,16#8188,"Invalid operating mode or broadcast
+(MB_ADDR = 0) and MODE parameter ≠ 1","Select the value 1 for MODE in Broadcast mode or
+select a different operating mode.",Modbus
+Configuration error - Modbus_Slave,16#818C,The pointer to a MB_HOLD_REG area must be a data block or a bit memory address area.,Select a suitable value for the pointer to the MB_HOLD_REG area.,Modbus
+Configuration error - Modbus_Slave,16#8280,Negative acknowledgment when reading module,"Check the input at the PORT parameter.
+You can find more detailed information on error causes in the static parameters Send_P2P.RDREC.STATUS or Receive_P2P.RDREC.STATUS, and in the description of the SFB RDREC.",Modbus
+Configuration error - Modbus_Slave,16#8281,Negative acknowledgment when writing module,"Check the input at the PORT parameter.
+You can find more detailed information on error causes in the static parameters Send_P2P.WRREC.STATUS or Receive_P2P.WRREC.STATUS, and in the description of the SFB WRREC.",Modbus
+Configuration error - Modbus_Slave,16#8452 1),MB_HOLD_REG is not a pointer to a DB or a bit memory area,Check the MB_HOLD_REG pointer,Modbus
+Configuration error - Modbus_Slave,16#8453 1),MB_HOLD_REG is not a pointer of type BOOL or WORD,Check the MB_HOLD_REG pointer,Modbus
+Configuration error - Modbus_Slave,16#8454 1),"The area addressed by MB_HOLD_REG is longer than the DB, or the area addressed is too small for the number of data bytes to be read or written.",Check the MB_HOLD_REG pointer,Modbus
+Configuration error - Modbus_Slave,16#8455 1),MB_HOLD_REG points to a write-protected DB,Check the MB_HOLD_REG pointer,Modbus
+Configuration error - Modbus_Slave,16#8456 1),Error during instruction execution. The cause of the error is shown in the STATUS parameter.,"Determine the value of the SFCSTATUS parameter. Check what this means in the description for SFC51, STATUS parameter.",Modbus
+Configuration error - Modbus_Master,16#8180,Invalid value for MB_DB parameter,"The value configured for MB_DB (instance data DB) at the Modbus_Comm_Load instruction is not valid.
+Check the interconnection of the Modbus_Comm_Load instruction and its error messages.",Modbus
+Configuration error - Modbus_Master,16#8186,Invalid station address,"Select a suitable station address at the MB_ADDR parameter.
+The following are valid: 1-247 at standard address area;
+1-65535 at extended address area
+(0 is reserved for Broadcast)",Modbus
+Configuration error - Modbus_Master,16#8188,Invalid operating mode or broadcast (MB_ADDR = 0) and MODE parameter ≠ 1,Select the value 1 for MODE in Broadcast mode or select a different operating mode.,Modbus
+Configuration error - Modbus_Master,16#8189,Invalid data address,"Select a suitable value for the data address at the DATA_ADDR parameter.
+See description Modbus_Master in the Info system",Modbus
+Configuration error - Modbus_Master,16#818A,Invalid length,"Select a suitable data length at the DATA_LEN parameter.
+See description Modbus_Master in the Info system",Modbus
+Configuration error - Modbus_Master,16#818B,Invalid value for DATA_PTR,"Select a suitable value for the data pointer at the DATA_PTR parameter (M or DB address).
+See description Modbus_Master in the Info system",Modbus
+Configuration error - Modbus_Master,16#818C,Interconnection error of the DATA_PTR parameter,Check the interconnection of the instruction.,Modbus
+Configuration error - Modbus_Master,16#818D,"The area addressed by DATA_PTR is longer than the DB, or the area addressed is too small for the number of data bytes to be read or written.",Check the DATA_PTR pointer,Modbus
+Configuration error - Modbus_Master,16#8280,Negative acknowledgment when reading module,"Check the input at the PORT parameter.
+You can find more detailed information on error causes in the static parameters Send_P2P.RDREC.STATUS or Receive_P2P.RDREC.STATUS, and in the description of the SFB RDREC.",Modbus
+Configuration error - Modbus_Master,16#8281,Negative acknowledgment when writing module,"Check the input at the PORT parameter.
+You can find more detailed information on error causes in the static parameters Send_P2P.WRREC.STATUS or Receive_P2P.WRREC.STATUS or Receive_Reset and in the description of the SFB WRREC.",Modbus
+Communication errors - Modbus_Master and Modbus_Slave,16#80D1,The waiting time for XON or CTS = ON has expired.,"The communication partner has a fault, is too slow or is offline. Check the communication partner or change the parameters, if necessary.",Modbus
+Communication errors - Modbus_Master and Modbus_Slave,16#80D2,"""Hardware RTS always ON"": Send job canceled due to change from DSR = ON to OFF",Check the communication partner. Make sure that DSR is ON for the entire duration of transmission.,Modbus
+Communication errors - Modbus_Master and Modbus_Slave,16#80E0,Frame aborted: Send buffer overflow / send frame too long,In the user program call the instruction more often or configure a communication with data flow control.,Modbus
+Communication errors - Modbus_Master and Modbus_Slave,16#80E1,Frame aborted: Parity error,"Check the connection line of the communication partners, or verify that the same data transmission rate, parity and stop bit number are configured for both devices.",Modbus
+Communication errors - Modbus_Master and Modbus_Slave,16#80E2,Frame aborted: Character frame error,"Check the settings for start bit, data bits, parity bit, data transmission rate, and stop bit(s).",Modbus
+Communication errors - Modbus_Master and Modbus_Slave,16#80E3,Frame aborted: Character overflow error,Check the number of data in the frame of the communication partner.,Modbus
+Communication errors - Modbus_Master and Modbus_Slave,16#80E4,Frame aborted: Maximum frame length reached,"Select a shorter frame length at the communication partner.
+The following are valid (depending on the module): 1 to 1024/2048/4096 (bytes)",Modbus
+Communication error - Modbus_Master,16#80C8,The slave does not respond within the set time,"Check the data transmission rate, parity and wiring of the slave.",Modbus
+Communication error - Modbus_Master,16#80C9,The slave does not respond within the time set by Blocked_Proc_Timeout.,"Check the setting for Blocked_Proc_Timeout.
+Check if the module has been configured with the Modbus_Comm_Load instruction. The module may possibly need to be reconfigured using Modbus_Comm_Load after a pull/plug or after voltage recovery.",Modbus
+Communication error - Modbus_Master,16#8200,The interface is busy with an ongoing request.,Repeat the command later. Make sure that there are no commands still running before you start a new one.,Modbus
+Protocol error - Modbus_Slave (only communication modules that support Modbus),16#8380,CRC error,Checksum error of the Modbus frame. Check the communication partner.,Modbus
+Protocol error - Modbus_Slave (only communication modules that support Modbus),16#8381,The function code is not supported or is not supported for broadcast.,Check the communication partner and make sure that a valid function code is sent.,Modbus
+Protocol error - Modbus_Slave (only communication modules that support Modbus),16#8382,Invalid length information in the request frame,Select a suitable data length at the DATA_LEN parameter.,Modbus
+Protocol error - Modbus_Slave (only communication modules that support Modbus),16#8383,Invalid data address in the request frame,Select a suitable value for the data address at the DATA_ADDR parameter.,Modbus
+Protocol error - Modbus_Slave (only communication modules that support Modbus),16#8384,Invalid data value error in the request frame,Check the data value in the request frame of the Modbus master,Modbus
+Protocol error - Modbus_Slave (only communication modules that support Modbus),16#8385,The diagnostic value is not supported by the Modbus slave (function code 08),The Modbus slave only supports the diagnostic values 16#0000 and 16#000A.,Modbus
+Protocol error - Modbus_Master (only communication modules that support Modbus),16#8380,CRC error,Checksum error of the Modbus frame. Check the communication partner.,Modbus
+Protocol error - Modbus_Master (only communication modules that support Modbus),16#8381,Response frame from Modbus Slave with the following error message: The function code is not supported.,Check the communication partner and make sure that a valid function code is sent.,Modbus
+Protocol error - Modbus_Master (only communication modules that support Modbus),16#8382,Response frame from Modbus Slave with the following error message: Invalid length,Select a suitable data length.,Modbus
+Protocol error - Modbus_Master (only communication modules that support Modbus),16#8383,Response frame from Modbus Slave with the following error message: Invalid data address in the request frame,Select a suitable value for the data address at the DATA_ADDR parameter.,Modbus
+Protocol error - Modbus_Master (only communication modules that support Modbus),16#8384,Response frame from Modbus Slave with the following error message: Data value error,Check the request frame to the Modbus slave.,Modbus
+Protocol error - Modbus_Master (only communication modules that support Modbus),16#8385,Response frame from Modbus Slave with the following error message: The diagnostic value is not supported by the Modbus slave,The Modbus slave only supports the diagnostic values 16#0000 and 16#000A.,Modbus
+Protocol error - Modbus_Master (only communication modules that support Modbus),16#8386,The returned function code does not match the requested function code.,Check the response frame and the addressing of the slave.,Modbus
+Protocol error - Modbus_Master (only communication modules that support Modbus),16#8387,A slave that was not requested answers,Check the response frame of the slave. Check the address settings of the slave.,Modbus
+Protocol error - Modbus_Master (only communication modules that support Modbus),16#8388,Error in the response of the slave to a write request.,Check the response frame of the slave.,Modbus
+Protocol error - Modbus_Master (only communication modules that support Modbus),16#8828 1),DATA_PTR points to a bit address that is not equal to n * 8,Check the DATA_PTR pointer,Modbus
+Protocol error - Modbus_Master (only communication modules that support Modbus),16#8852 1),DATA_PTR is not a pointer to a DB or a bit memory area,Check the DATA_PTR pointer,Modbus
+Protocol error - Modbus_Master (only communication modules that support Modbus),16#8853 1),DATA_PTR is not a pointer of type BOOL or WORD,Check the DATA_PTR pointer,Modbus
+Protocol error - Modbus_Master (only communication modules that support Modbus),16#8855 1),DATA_PTR points to a write-protected DB,Check the DATA_PTR pointer,Modbus
+Protocol error - Modbus_Master (only communication modules that support Modbus),16#8856 1),Error during call of SFC51,Call the Modbus_Master instruction again,Modbus
+Error - Modbus_Slave (only communication modules that support Modbus),16#8428 1),MB_HOLD_REG points to a bit address that is not equal to n * 8,Check the MB_HOLD_REG pointer,Modbus
+Error - Modbus_Slave (only communication modules that support Modbus),16#8452 1),MB_HOLD_REG is not a pointer to a DB or a bit memory area,Check the MB_HOLD_REG pointer,Modbus
+Error - Modbus_Slave (only communication modules that support Modbus),16#8453 1),MB_HOLD_REG is not a pointer of type BOOL or WORD,Check the MB_HOLD_REG pointer,Modbus
+Error - Modbus_Slave (only communication modules that support Modbus),16#8454 1),"The area addressed by MB_HOLD_REG is longer than the DB, or the area addressed is too small for the number of data bytes to be read or written.",Check the MB_HOLD_REG pointer,Modbus
+Error - Modbus_Slave (only communication modules that support Modbus),16#8455 1),MB_HOLD_REG points to a write-protected DB,Check the MB_HOLD_REG pointer,Modbus
+Error - Modbus_Slave (only communication modules that support Modbus),16#8456 1),Error during call of SFC51,Call the Modbus_Slave instruction again,Modbus
