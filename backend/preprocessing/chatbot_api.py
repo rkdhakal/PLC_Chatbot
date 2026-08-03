@@ -72,7 +72,7 @@ class PLCChatbot:
         print("[INIT] Configuring Gemini...")
         genai.configure(api_key=GEMINI_API_KEY)
         self.llm = genai.GenerativeModel(
-            model_name="gemini-1.5-flash",
+            model_name="gemini-3.1-flash-lite",
             generation_config=genai.GenerationConfig(
                 temperature=0.0,
                 max_output_tokens=512,
@@ -162,7 +162,7 @@ def health():
     return {
         "status":    "ok",
         "records":   len(chatbot.df),
-        "model":     "gemini-1.5-flash",
+        "model":     "gemini-3.1-flash-lite",
         "embedding": "all-MiniLM-L6-v2",
         "threshold": SIMILARITY_THRESHOLD,
     }
