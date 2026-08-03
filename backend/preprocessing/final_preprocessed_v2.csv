@@ -1,0 +1,686 @@
+error_code,category,description,remedy,error_type,source_file,ingested_at,content
+16#0000,,No error,,Modbus | PtP | USS,modbus | ptp | uss,2026-08-03T05:55:44.811900+00:00,"error_code: 16#0000
+category: 
+error_type: Modbus | PtP | USS
+description: No error
+remedy:"
+16#8181,Configuration error of the interface - Modbus_Comm_Load,The module does not support this data transmission rate. | Data type error,Select a valid data transmission rate for the module at the BAUD parameter. | Select a suitable data type. The following are valid: Real Word Double word,Modbus | USS,modbus | uss,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8181
+category: Configuration error of the interface - Modbus_Comm_Load
+error_type: Modbus | USS
+description: The module does not support this data transmission rate. | Data type error
+remedy: Select a valid data transmission rate for the module at the BAUD parameter. | Select a suitable data type. The following are valid: Real Word Double word"
+16#8182,Configuration error of the interface - Modbus_Comm_Load,"The module does not support this parity setting. | Data type error: ""Double word"" or ""Real"" may not be returned for the ""Word"" request.","Select a suitable value for ""Parity"" at the PARITY parameter. The following are valid: None (1) Even (2) Odd (3) Mark (4) Space (5) Any (6) | Check the response frame of the drive.",Modbus | USS,modbus | uss,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8182
+category: Configuration error of the interface - Modbus_Comm_Load
+error_type: Modbus | USS
+description: The module does not support this parity setting. | Data type error: ""Double word"" or ""Real"" may not be returned for the ""Word"" request.
+remedy: Select a suitable value for ""Parity"" at the PARITY parameter. The following are valid: None (1) Even (2) Odd (3) Mark (4) Space (5) Any (6) | Check the response frame of the drive."
+16#8183,Configuration error of the interface - Modbus_Comm_Load,"The module does not support this type of data flow control. | Data type error: ""Word"" may not be returned for the ""Double word"" or ""Real"" request.",Select a valid data flow control for the module at the FLOW_CTRL parameter. | Check the response frame of the drive.,Modbus | USS,modbus | uss,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8183
+category: Configuration error of the interface - Modbus_Comm_Load
+error_type: Modbus | USS
+description: The module does not support this type of data flow control. | Data type error: ""Word"" may not be returned for the ""Double word"" or ""Real"" request.
+remedy: Select a valid data flow control for the module at the FLOW_CTRL parameter. | Check the response frame of the drive."
+16#8184,Configuration error of the interface - Modbus_Comm_Load,"Invalid value for ""Response timeout"". | Checksum error in response of drive","Select a suitable value for ""Response timeout"" at the RESP_TO parameter. Valid range of values: 1 to 65535 (ms) | Check the drive and the communication connection.",Modbus | USS,modbus | uss,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8184
+category: Configuration error of the interface - Modbus_Comm_Load
+error_type: Modbus | USS
+description: Invalid value for ""Response timeout"". | Checksum error in response of drive
+remedy: Select a suitable value for ""Response timeout"" at the RESP_TO parameter. Valid range of values: 1 to 65535 (ms) | Check the drive and the communication connection."
+16#8280,"Configuration error of the interface - Modbus_Comm_Load | Configuration error - Modbus_Slave | Configuration error - Modbus_Master | Error codes, general",Negative acknowledgment when reading module,"Check the input at the PORT parameter. You can find more detailed information on error causes in the Send_Config.RDREC.STATUS or Receive_Config.RDREC.STATUS static parameters or RDREC.STATUS and in the description of the SFB RDREC. | Check the input at the PORT parameter. You can find more detailed information on error causes in the static parameters Send_P2P.RDREC.STATUS or Receive_P2P.RDREC.STATUS, and in the description of the SFB RDREC. | You can find more detailed information on error causes in theRDREC.STATUS static parameters and in the description of the SFB RDREC. Check the input at the PORT parameter Set the COM_RST parameter prior to the initial call. | Check the input at the PORT parameter. You can find more detailed information on error causes in the static parameters Port_Config.RDREC.STATUS, Send_Config.RDREC.STATUS , Receive_Config.RDREC.STATUS , Send_P2P.RDREC.STATUS or Receive_P2P.RDREC.STATUS, and in the description of the SFB RDREC.",Modbus | PtP | USS,modbus | ptp | uss,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8280
+category: Configuration error of the interface - Modbus_Comm_Load | Configuration error - Modbus_Slave | Configuration error - Modbus_Master | Error codes, general
+error_type: Modbus | PtP | USS
+description: Negative acknowledgment when reading module
+remedy: Check the input at the PORT parameter. You can find more detailed information on error causes in the Send_Config.RDREC.STATUS or Receive_Config.RDREC.STATUS static parameters or RDREC.STATUS and in the description of the SFB RDREC. | Check the input at the PORT parameter. You can find more detailed information on error causes in the static parameters Send_P2P.RDREC.STATUS or Receive_P2P.RDREC.STATUS, and in the description of the SFB RDREC. | You can find more detailed information on error causes in theRDREC.STATUS static parameters and in the description of the SFB RDREC. Check the input at the PORT parameter Set the COM_RST parameter prior to the initial call. | Check the input at the PORT parameter. You can find more detailed information on error causes in the static parameters Port_Config.RDREC.STATUS, Send_Config.RDREC.STATUS , Receive_Config.RDREC.STATUS , Send_P2P.RDREC.STATUS or Receive_P2P.RDREC.STATUS, and in the description of the SFB RDREC."
+16#8281,"Configuration error of the interface - Modbus_Comm_Load | Configuration error - Modbus_Slave | Configuration error - Modbus_Master | Error codes, general",Negative acknowledgment when writing module,"Check the input at the PORT parameter. You can find more detailed information on error causes in the Send_Config.WRREC.STATUS or Receive_Config.WRREC.STATUS static parameters or WRREC.STATUS and in the description of the SFB WRREC. | Check the input at the PORT parameter. You can find more detailed information on error causes in the static parameters Send_P2P.WRREC.STATUS or Receive_P2P.WRREC.STATUS, and in the description of the SFB WRREC. | Check the input at the PORT parameter. You can find more detailed information on error causes in the static parameters Send_P2P.WRREC.STATUS or Receive_P2P.WRREC.STATUS or Receive_Reset and in the description of the SFB WRREC. | Check the input at the PORT parameter You can find more detailed information on error causes in the WRREC.STATUS static parameters and in the description of the SFB WRREC. | Check the input at the PORT parameter. You can find more detailed information on error causes in the static parameters Port_Config.WRREC.STATUS, Send_Config.WRREC.STATUS , Receive_Config.WRREC.STATUS , Send_P2P.RDREC.STATUS or Receive_P2P.RDREC.STATUS, and in the description of the SFB WRREC.",Modbus | PtP | USS,modbus | ptp | uss,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8281
+category: Configuration error of the interface - Modbus_Comm_Load | Configuration error - Modbus_Slave | Configuration error - Modbus_Master | Error codes, general
+error_type: Modbus | PtP | USS
+description: Negative acknowledgment when writing module
+remedy: Check the input at the PORT parameter. You can find more detailed information on error causes in the Send_Config.WRREC.STATUS or Receive_Config.WRREC.STATUS static parameters or WRREC.STATUS and in the description of the SFB WRREC. | Check the input at the PORT parameter. You can find more detailed information on error causes in the static parameters Send_P2P.WRREC.STATUS or Receive_P2P.WRREC.STATUS, and in the description of the SFB WRREC. | Check the input at the PORT parameter. You can find more detailed information on error causes in the static parameters Send_P2P.WRREC.STATUS or Receive_P2P.WRREC.STATUS or Receive_Reset and in the description of the SFB WRREC. | Check the input at the PORT parameter You can find more detailed information on error causes in the WRREC.STATUS static parameters and in the description of the SFB WRREC. | Check the input at the PORT parameter. You can find more detailed information on error causes in the static parameters Port_Config.WRREC.STATUS, Send_Config.WRREC.STATUS , Receive_Config.WRREC.STATUS , Send_P2P.RDREC.STATUS or Receive_P2P.RDREC.STATUS, and in the description of the SFB WRREC."
+16#8282,"Configuration error of the interface - Modbus_Comm_Load | Error codes, general",Module not available,Check the input at the PORT parameter and ensure that the module can be reached.,Modbus | PtP,modbus | ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8282
+category: Configuration error of the interface - Modbus_Comm_Load | Error codes, general
+error_type: Modbus | PtP
+description: Module not available
+remedy: Check the input at the PORT parameter and ensure that the module can be reached."
+16#8186,Configuration error - Modbus_Slave | Configuration error - Modbus_Master,Invalid slave address | Invalid station address | Setpoint error,Select a suitable slave address at the MB_ADDR parameter. The following are valid: 1-247 at standard address area; 1-65535 at extended address area (0 is reserved for Broadcast) | Select a suitable station address at the MB_ADDR parameter. The following are valid: 1-247 at standard address area; 1-65535 at extended address area (0 is reserved for Broadcast) | Valid setpoint range: -200% to +200%,Modbus | USS,modbus | uss,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8186
+category: Configuration error - Modbus_Slave | Configuration error - Modbus_Master
+error_type: Modbus | USS
+description: Invalid slave address | Invalid station address | Setpoint error
+remedy: Select a suitable slave address at the MB_ADDR parameter. The following are valid: 1-247 at standard address area; 1-65535 at extended address area (0 is reserved for Broadcast) | Select a suitable station address at the MB_ADDR parameter. The following are valid: 1-247 at standard address area; 1-65535 at extended address area (0 is reserved for Broadcast) | Valid setpoint range: -200% to +200%"
+16#8187,Configuration error - Modbus_Slave,Invalid value at MB_HOLD_REG parameter | Incorrect drive number returned,Select a suitable value for the hold register at the MB_HOLD_REG parameter. | Check the response frame of the drive.,Modbus | USS,modbus | uss,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8187
+category: Configuration error - Modbus_Slave
+error_type: Modbus | USS
+description: Invalid value at MB_HOLD_REG parameter | Incorrect drive number returned
+remedy: Select a suitable value for the hold register at the MB_HOLD_REG parameter. | Check the response frame of the drive."
+16#8188,Configuration error - Modbus_Slave | Configuration error - Modbus_Master,Invalid operating mode or broadcast (MB_ADDR = 0) and MODE parameter ≠ 1 | Invalid PZD length,"Select the value 1 for MODE in Broadcast mode or select a different operating mode. | Permitted PZD lengths: 2, 4, 6, 8 words",Modbus | USS,modbus | uss,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8188
+category: Configuration error - Modbus_Slave | Configuration error - Modbus_Master
+error_type: Modbus | USS
+description: Invalid operating mode or broadcast (MB_ADDR = 0) and MODE parameter ≠ 1 | Invalid PZD length
+remedy: Select the value 1 for MODE in Broadcast mode or select a different operating mode. | Permitted PZD lengths: 2, 4, 6, 8 words"
+16#818C,Configuration error - Modbus_Slave | Configuration error - Modbus_Master,The pointer to a MB_HOLD_REG area must be a data block or a bit memory address area. | Interconnection error of the DATA_PTR parameter | The drive responds with an error message to a parameter request.,"Select a suitable value for the pointer to the MB_HOLD_REG area. | Check the interconnection of the instruction. | Check the response frame of the drive. Check the parameter request. Check if the instructions USS_Read_Param, USS_Write_Param or USS_Port_Scan have reported an error. If they have, check the value of the static tag USS_DB. w_USSExtendedError of the USS_Drive_Control instruction.",Modbus | USS,modbus | uss,2026-08-03T05:55:44.811900+00:00,"error_code: 16#818C
+category: Configuration error - Modbus_Slave | Configuration error - Modbus_Master
+error_type: Modbus | USS
+description: The pointer to a MB_HOLD_REG area must be a data block or a bit memory address area. | Interconnection error of the DATA_PTR parameter | The drive responds with an error message to a parameter request.
+remedy: Select a suitable value for the pointer to the MB_HOLD_REG area. | Check the interconnection of the instruction. | Check the response frame of the drive. Check the parameter request. Check if the instructions USS_Read_Param, USS_Write_Param or USS_Port_Scan have reported an error. If they have, check the value of the static tag USS_DB. w_USSExtendedError of the USS_Drive_Control instruction."
+16#8452,Configuration error - Modbus_Slave | Error - Modbus_Slave (only communication modules that support Modbus),MB_HOLD_REG is not a pointer to a DB or a bit memory area,Check the MB_HOLD_REG pointer,Modbus,modbus,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8452
+category: Configuration error - Modbus_Slave | Error - Modbus_Slave (only communication modules that support Modbus)
+error_type: Modbus
+description: MB_HOLD_REG is not a pointer to a DB or a bit memory area
+remedy: Check the MB_HOLD_REG pointer"
+16#8453,Configuration error - Modbus_Slave | Error - Modbus_Slave (only communication modules that support Modbus),MB_HOLD_REG is not a pointer of type BOOL or WORD,Check the MB_HOLD_REG pointer,Modbus,modbus,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8453
+category: Configuration error - Modbus_Slave | Error - Modbus_Slave (only communication modules that support Modbus)
+error_type: Modbus
+description: MB_HOLD_REG is not a pointer of type BOOL or WORD
+remedy: Check the MB_HOLD_REG pointer"
+16#8454,Configuration error - Modbus_Slave | Error - Modbus_Slave (only communication modules that support Modbus),"The area addressed by MB_HOLD_REG is longer than the DB, or the area addressed is too small for the number of data bytes to be read or written.",Check the MB_HOLD_REG pointer,Modbus,modbus,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8454
+category: Configuration error - Modbus_Slave | Error - Modbus_Slave (only communication modules that support Modbus)
+error_type: Modbus
+description: The area addressed by MB_HOLD_REG is longer than the DB, or the area addressed is too small for the number of data bytes to be read or written.
+remedy: Check the MB_HOLD_REG pointer"
+16#8455,Configuration error - Modbus_Slave | Error - Modbus_Slave (only communication modules that support Modbus),MB_HOLD_REG points to a write-protected DB,Check the MB_HOLD_REG pointer,Modbus,modbus,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8455
+category: Configuration error - Modbus_Slave | Error - Modbus_Slave (only communication modules that support Modbus)
+error_type: Modbus
+description: MB_HOLD_REG points to a write-protected DB
+remedy: Check the MB_HOLD_REG pointer"
+16#8456,Configuration error - Modbus_Slave | Error - Modbus_Slave (only communication modules that support Modbus),Error during instruction execution. The cause of the error is shown in the STATUS parameter. | Error during call of SFC51,"Determine the value of the SFCSTATUS parameter. Check what this means in the description for SFC51, STATUS parameter. | Call the Modbus_Slave instruction again",Modbus,modbus,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8456
+category: Configuration error - Modbus_Slave | Error - Modbus_Slave (only communication modules that support Modbus)
+error_type: Modbus
+description: Error during instruction execution. The cause of the error is shown in the STATUS parameter. | Error during call of SFC51
+remedy: Determine the value of the SFCSTATUS parameter. Check what this means in the description for SFC51, STATUS parameter. | Call the Modbus_Slave instruction again"
+16#8180,Configuration error - Modbus_Master,Invalid value for MB_DB parameter | Length error in response of drive,The value configured for MB_DB (instance data DB) at the Modbus_Comm_Load instruction is not valid. Check the interconnection of the Modbus_Comm_Load instruction and its error messages. | Check the response frame of the drive.,Modbus | USS,modbus | uss,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8180
+category: Configuration error - Modbus_Master
+error_type: Modbus | USS
+description: Invalid value for MB_DB parameter | Length error in response of drive
+remedy: The value configured for MB_DB (instance data DB) at the Modbus_Comm_Load instruction is not valid. Check the interconnection of the Modbus_Comm_Load instruction and its error messages. | Check the response frame of the drive."
+16#8189,Configuration error - Modbus_Master,Invalid data address | The module does not support this data transmission rate.,Select a suitable value for the data address at the DATA_ADDR parameter. See description Modbus_Master in the Info system | Select a valid data transmission rate for the module.,Modbus | USS,modbus | uss,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8189
+category: Configuration error - Modbus_Master
+error_type: Modbus | USS
+description: Invalid data address | The module does not support this data transmission rate.
+remedy: Select a suitable value for the data address at the DATA_ADDR parameter. See description Modbus_Master in the Info system | Select a valid data transmission rate for the module."
+16#818A,Configuration error - Modbus_Master,Invalid length | A different request for this drive is currently active.,Select a suitable data length at the DATA_LEN parameter. See description Modbus_Master in the Info system | Repeat the parameter read or write command later.,Modbus | USS,modbus | uss,2026-08-03T05:55:44.811900+00:00,"error_code: 16#818A
+category: Configuration error - Modbus_Master
+error_type: Modbus | USS
+description: Invalid length | A different request for this drive is currently active.
+remedy: Select a suitable data length at the DATA_LEN parameter. See description Modbus_Master in the Info system | Repeat the parameter read or write command later."
+16#818B,Configuration error - Modbus_Master,Invalid value for DATA_PTR | The drive does not respond.,Select a suitable value for the data pointer at the DATA_PTR parameter (M or DB address). See description Modbus_Master in the Info system | Check the drive.,Modbus | USS,modbus | uss,2026-08-03T05:55:44.811900+00:00,"error_code: 16#818B
+category: Configuration error - Modbus_Master
+error_type: Modbus | USS
+description: Invalid value for DATA_PTR | The drive does not respond.
+remedy: Select a suitable value for the data pointer at the DATA_PTR parameter (M or DB address). See description Modbus_Master in the Info system | Check the drive."
+16#818D,Configuration error - Modbus_Master,"The area addressed by DATA_PTR is longer than the DB, or the area addressed is too small for the number of data bytes to be read or written. | The drive responds with an access error message to a parameter request.",Check the DATA_PTR pointer | Check the response frame of the drive. Check the parameter request.,Modbus | USS,modbus | uss,2026-08-03T05:55:44.811900+00:00,"error_code: 16#818D
+category: Configuration error - Modbus_Master
+error_type: Modbus | USS
+description: The area addressed by DATA_PTR is longer than the DB, or the area addressed is too small for the number of data bytes to be read or written. | The drive responds with an access error message to a parameter request.
+remedy: Check the DATA_PTR pointer | Check the response frame of the drive. Check the parameter request."
+16#80D1,Communication errors - Modbus_Master and Modbus_Slave,The waiting time for XON or CTS = ON has expired.,"The communication partner has a fault, is too slow or is offline. Check the communication partner or change the parameters, if necessary.",Modbus,modbus,2026-08-03T05:55:44.811900+00:00,"error_code: 16#80D1
+category: Communication errors - Modbus_Master and Modbus_Slave
+error_type: Modbus
+description: The waiting time for XON or CTS = ON has expired.
+remedy: The communication partner has a fault, is too slow or is offline. Check the communication partner or change the parameters, if necessary."
+16#80D2,Communication errors - Modbus_Master and Modbus_Slave,"""Hardware RTS always ON"": Send job canceled due to change from DSR = ON to OFF",Check the communication partner. Make sure that DSR is ON for the entire duration of transmission.,Modbus,modbus,2026-08-03T05:55:44.811900+00:00,"error_code: 16#80D2
+category: Communication errors - Modbus_Master and Modbus_Slave
+error_type: Modbus
+description: ""Hardware RTS always ON"": Send job canceled due to change from DSR = ON to OFF
+remedy: Check the communication partner. Make sure that DSR is ON for the entire duration of transmission."
+16#80E0,Communication errors - Modbus_Master and Modbus_Slave,Frame aborted: Send buffer overflow / send frame too long,In the user program call the instruction more often or configure a communication with data flow control.,Modbus,modbus,2026-08-03T05:55:44.811900+00:00,"error_code: 16#80E0
+category: Communication errors - Modbus_Master and Modbus_Slave
+error_type: Modbus
+description: Frame aborted: Send buffer overflow / send frame too long
+remedy: In the user program call the instruction more often or configure a communication with data flow control."
+16#80E1,Communication errors - Modbus_Master and Modbus_Slave,Frame aborted: Parity error,"Check the connection line of the communication partners, or verify that the same data transmission rate, parity and stop bit number are configured for both devices.",Modbus,modbus,2026-08-03T05:55:44.811900+00:00,"error_code: 16#80E1
+category: Communication errors - Modbus_Master and Modbus_Slave
+error_type: Modbus
+description: Frame aborted: Parity error
+remedy: Check the connection line of the communication partners, or verify that the same data transmission rate, parity and stop bit number are configured for both devices."
+16#80E2,Communication errors - Modbus_Master and Modbus_Slave,Frame aborted: Character frame error,"Check the settings for start bit, data bits, parity bit, data transmission rate, and stop bit(s).",Modbus,modbus,2026-08-03T05:55:44.811900+00:00,"error_code: 16#80E2
+category: Communication errors - Modbus_Master and Modbus_Slave
+error_type: Modbus
+description: Frame aborted: Character frame error
+remedy: Check the settings for start bit, data bits, parity bit, data transmission rate, and stop bit(s)."
+16#80E3,Communication errors - Modbus_Master and Modbus_Slave,Frame aborted: Character overflow error,Check the number of data in the frame of the communication partner.,Modbus,modbus,2026-08-03T05:55:44.811900+00:00,"error_code: 16#80E3
+category: Communication errors - Modbus_Master and Modbus_Slave
+error_type: Modbus
+description: Frame aborted: Character overflow error
+remedy: Check the number of data in the frame of the communication partner."
+16#80E4,Communication errors - Modbus_Master and Modbus_Slave,Frame aborted: Maximum frame length reached,Select a shorter frame length at the communication partner. The following are valid (depending on the module): 1 to 1024/2048/4096 (bytes),Modbus,modbus,2026-08-03T05:55:44.811900+00:00,"error_code: 16#80E4
+category: Communication errors - Modbus_Master and Modbus_Slave
+error_type: Modbus
+description: Frame aborted: Maximum frame length reached
+remedy: Select a shorter frame length at the communication partner. The following are valid (depending on the module): 1 to 1024/2048/4096 (bytes)"
+16#80C8,Communication error - Modbus_Master,The slave does not respond within the set time,"Check the data transmission rate, parity and wiring of the slave.",Modbus,modbus,2026-08-03T05:55:44.811900+00:00,"error_code: 16#80C8
+category: Communication error - Modbus_Master
+error_type: Modbus
+description: The slave does not respond within the set time
+remedy: Check the data transmission rate, parity and wiring of the slave."
+16#80C9,Communication error - Modbus_Master,The slave does not respond within the time set by Blocked_Proc_Timeout.,Check the setting for Blocked_Proc_Timeout. Check if the module has been configured with the Modbus_Comm_Load instruction. The module may possibly need to be reconfigured using Modbus_Comm_Load after a pull/plug or after voltage recovery.,Modbus,modbus,2026-08-03T05:55:44.811900+00:00,"error_code: 16#80C9
+category: Communication error - Modbus_Master
+error_type: Modbus
+description: The slave does not respond within the time set by Blocked_Proc_Timeout.
+remedy: Check the setting for Blocked_Proc_Timeout. Check if the module has been configured with the Modbus_Comm_Load instruction. The module may possibly need to be reconfigured using Modbus_Comm_Load after a pull/plug or after voltage recovery."
+16#8200,Communication error - Modbus_Master,The interface is busy with an ongoing request.,Repeat the command later. Make sure that there are no commands still running before you start a new one.,Modbus,modbus,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8200
+category: Communication error - Modbus_Master
+error_type: Modbus
+description: The interface is busy with an ongoing request.
+remedy: Repeat the command later. Make sure that there are no commands still running before you start a new one."
+16#8380,Protocol error - Modbus_Slave (only communication modules that support Modbus) | Protocol error - Modbus_Master (only communication modules that support Modbus) | Error codes 3964(R) protocol,"CRC error | Parameter assignment error: Invalid value for ""Character delay time"".","Checksum error of the Modbus frame. Check the communication partner. | Select a suitable value for ""Character delay time"" (CharacterDelayTime). Valid range of values: 1 to 65535 (ms)",Modbus | PtP,modbus | ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8380
+category: Protocol error - Modbus_Slave (only communication modules that support Modbus) | Protocol error - Modbus_Master (only communication modules that support Modbus) | Error codes 3964(R) protocol
+error_type: Modbus | PtP
+description: CRC error | Parameter assignment error: Invalid value for ""Character delay time"".
+remedy: Checksum error of the Modbus frame. Check the communication partner. | Select a suitable value for ""Character delay time"" (CharacterDelayTime). Valid range of values: 1 to 65535 (ms)"
+16#8381,Protocol error - Modbus_Slave (only communication modules that support Modbus) | Protocol error - Modbus_Master (only communication modules that support Modbus) | Error codes 3964(R) protocol,"The function code is not supported or is not supported for broadcast. | Response frame from Modbus Slave with the following error message: The function code is not supported. | Parameter assignment error: Invalid value for ""Response timeout"".","Check the communication partner and make sure that a valid function code is sent. | Select a suitable value for ""Response timeout"" (AcknDelayTime). Valid range of values: 1 to 65535 (ms)",Modbus | PtP,modbus | ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8381
+category: Protocol error - Modbus_Slave (only communication modules that support Modbus) | Protocol error - Modbus_Master (only communication modules that support Modbus) | Error codes 3964(R) protocol
+error_type: Modbus | PtP
+description: The function code is not supported or is not supported for broadcast. | Response frame from Modbus Slave with the following error message: The function code is not supported. | Parameter assignment error: Invalid value for ""Response timeout"".
+remedy: Check the communication partner and make sure that a valid function code is sent. | Select a suitable value for ""Response timeout"" (AcknDelayTime). Valid range of values: 1 to 65535 (ms)"
+16#8382,Protocol error - Modbus_Slave (only communication modules that support Modbus) | Protocol error - Modbus_Master (only communication modules that support Modbus) | Error codes 3964(R) protocol,"Invalid length information in the request frame | Response frame from Modbus Slave with the following error message: Invalid length | Parameter assignment error: Invalid value for ""Priority"".","Select a suitable data length at the DATA_LEN parameter. | Select a suitable data length. | Select a suitable value for ""Priority"" (Priority). The following are valid: High (1) Low (0)",Modbus | PtP,modbus | ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8382
+category: Protocol error - Modbus_Slave (only communication modules that support Modbus) | Protocol error - Modbus_Master (only communication modules that support Modbus) | Error codes 3964(R) protocol
+error_type: Modbus | PtP
+description: Invalid length information in the request frame | Response frame from Modbus Slave with the following error message: Invalid length | Parameter assignment error: Invalid value for ""Priority"".
+remedy: Select a suitable data length at the DATA_LEN parameter. | Select a suitable data length. | Select a suitable value for ""Priority"" (Priority). The following are valid: High (1) Low (0)"
+16#8383,Protocol error - Modbus_Slave (only communication modules that support Modbus) | Protocol error - Modbus_Master (only communication modules that support Modbus) | Error codes 3964(R) protocol,"Invalid data address in the request frame | Response frame from Modbus Slave with the following error message: Invalid data address in the request frame | Parameter assignment error: Invalid value for ""Block check""","Select a suitable value for the data address at the DATA_ADDR parameter. | Select a suitable value for ""Block check"" (BCC). The following are valid: With block check (1) Without block check (0)",Modbus | PtP,modbus | ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8383
+category: Protocol error - Modbus_Slave (only communication modules that support Modbus) | Protocol error - Modbus_Master (only communication modules that support Modbus) | Error codes 3964(R) protocol
+error_type: Modbus | PtP
+description: Invalid data address in the request frame | Response frame from Modbus Slave with the following error message: Invalid data address in the request frame | Parameter assignment error: Invalid value for ""Block check""
+remedy: Select a suitable value for the data address at the DATA_ADDR parameter. | Select a suitable value for ""Block check"" (BCC). The following are valid: With block check (1) Without block check (0)"
+16#8384,Protocol error - Modbus_Slave (only communication modules that support Modbus) | Protocol error - Modbus_Master (only communication modules that support Modbus) | Error codes 3964(R) protocol,"Invalid data value error in the request frame | Response frame from Modbus Slave with the following error message: Data value error | Parameter assignment error: Invalid value for ""Connection attempts"".","Check the data value in the request frame of the Modbus master | Check the request frame to the Modbus slave. | Select a suitable value for ""Connection attempts"" (BuildupAttempts). Valid range of values: 1-255",Modbus | PtP,modbus | ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8384
+category: Protocol error - Modbus_Slave (only communication modules that support Modbus) | Protocol error - Modbus_Master (only communication modules that support Modbus) | Error codes 3964(R) protocol
+error_type: Modbus | PtP
+description: Invalid data value error in the request frame | Response frame from Modbus Slave with the following error message: Data value error | Parameter assignment error: Invalid value for ""Connection attempts"".
+remedy: Check the data value in the request frame of the Modbus master | Check the request frame to the Modbus slave. | Select a suitable value for ""Connection attempts"" (BuildupAttempts). Valid range of values: 1-255"
+16#8385,Protocol error - Modbus_Slave (only communication modules that support Modbus) | Protocol error - Modbus_Master (only communication modules that support Modbus) | Error codes 3964(R) protocol,"The diagnostic value is not supported by the Modbus slave (function code 08) | Response frame from Modbus Slave with the following error message: The diagnostic value is not supported by the Modbus slave | Parameter assignment error: Invalid value for ""Transmission attempts"".","The Modbus slave only supports the diagnostic values 16#0000 and 16#000A. | Select a suitable value for ""Transmission attempts"" (RepetitionAttempts). Valid range of values: 1-255",Modbus | PtP,modbus | ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8385
+category: Protocol error - Modbus_Slave (only communication modules that support Modbus) | Protocol error - Modbus_Master (only communication modules that support Modbus) | Error codes 3964(R) protocol
+error_type: Modbus | PtP
+description: The diagnostic value is not supported by the Modbus slave (function code 08) | Response frame from Modbus Slave with the following error message: The diagnostic value is not supported by the Modbus slave | Parameter assignment error: Invalid value for ""Transmission attempts"".
+remedy: The Modbus slave only supports the diagnostic values 16#0000 and 16#000A. | Select a suitable value for ""Transmission attempts"" (RepetitionAttempts). Valid range of values: 1-255"
+16#8386,Protocol error - Modbus_Master (only communication modules that support Modbus) | Error codes 3964(R) protocol,The returned function code does not match the requested function code. | Runtime error: Number of connection attempts exceeded,Check the response frame and the addressing of the slave. | Check the interface cable and the transmission parameters. Also check whether the receive function is configured correctly at the partner device.,Modbus | PtP,modbus | ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8386
+category: Protocol error - Modbus_Master (only communication modules that support Modbus) | Error codes 3964(R) protocol
+error_type: Modbus | PtP
+description: The returned function code does not match the requested function code. | Runtime error: Number of connection attempts exceeded
+remedy: Check the response frame and the addressing of the slave. | Check the interface cable and the transmission parameters. Also check whether the receive function is configured correctly at the partner device."
+16#8387,Protocol error - Modbus_Master (only communication modules that support Modbus) | Error codes 3964(R) protocol,A slave that was not requested answers | Runtime error: Number of transmission attempts exceeded,"Check the response frame of the slave. Check the address settings of the slave. | Check the interface cable, the transmission parameters and the configuration of the communication partner.",Modbus | PtP,modbus | ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8387
+category: Protocol error - Modbus_Master (only communication modules that support Modbus) | Error codes 3964(R) protocol
+error_type: Modbus | PtP
+description: A slave that was not requested answers | Runtime error: Number of transmission attempts exceeded
+remedy: Check the response frame of the slave. Check the address settings of the slave. | Check the interface cable, the transmission parameters and the configuration of the communication partner."
+16#8388,Protocol error - Modbus_Master (only communication modules that support Modbus) | Error codes 3964(R) protocol,"Error in the response of the slave to a write request. | Runtime error: Error at the ""Block check character"" The internally calculated value of the block check character does not correspond to the block check character received by the partner at the connection end.","Check the response frame of the slave. | Check whether the connection is seriously disrupted; in this case you may also occasionally see error codes. Check for proper function at the partner device, possibly by using an interface test device that is switched into the transmission line.",Modbus | PtP,modbus | ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8388
+category: Protocol error - Modbus_Master (only communication modules that support Modbus) | Error codes 3964(R) protocol
+error_type: Modbus | PtP
+description: Error in the response of the slave to a write request. | Runtime error: Error at the ""Block check character"" The internally calculated value of the block check character does not correspond to the block check character received by the partner at the connection end.
+remedy: Check the response frame of the slave. | Check whether the connection is seriously disrupted; in this case you may also occasionally see error codes. Check for proper function at the partner device, possibly by using an interface test device that is switched into the transmission line."
+16#8828,Protocol error - Modbus_Master (only communication modules that support Modbus),DATA_PTR points to a bit address that is not equal to n * 8,Check the DATA_PTR pointer,Modbus,modbus,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8828
+category: Protocol error - Modbus_Master (only communication modules that support Modbus)
+error_type: Modbus
+description: DATA_PTR points to a bit address that is not equal to n * 8
+remedy: Check the DATA_PTR pointer"
+16#8852,Protocol error - Modbus_Master (only communication modules that support Modbus),DATA_PTR is not a pointer to a DB or a bit memory area,Check the DATA_PTR pointer,Modbus,modbus,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8852
+category: Protocol error - Modbus_Master (only communication modules that support Modbus)
+error_type: Modbus
+description: DATA_PTR is not a pointer to a DB or a bit memory area
+remedy: Check the DATA_PTR pointer"
+16#8853,Protocol error - Modbus_Master (only communication modules that support Modbus),DATA_PTR is not a pointer of type BOOL or WORD,Check the DATA_PTR pointer,Modbus,modbus,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8853
+category: Protocol error - Modbus_Master (only communication modules that support Modbus)
+error_type: Modbus
+description: DATA_PTR is not a pointer of type BOOL or WORD
+remedy: Check the DATA_PTR pointer"
+16#8855,Protocol error - Modbus_Master (only communication modules that support Modbus),DATA_PTR points to a write-protected DB,Check the DATA_PTR pointer,Modbus,modbus,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8855
+category: Protocol error - Modbus_Master (only communication modules that support Modbus)
+error_type: Modbus
+description: DATA_PTR points to a write-protected DB
+remedy: Check the DATA_PTR pointer"
+16#8856,Protocol error - Modbus_Master (only communication modules that support Modbus),Error during call of SFC51,Call the Modbus_Master instruction again,Modbus,modbus,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8856
+category: Protocol error - Modbus_Master (only communication modules that support Modbus)
+error_type: Modbus
+description: Error during call of SFC51
+remedy: Call the Modbus_Master instruction again"
+16#8428,Error - Modbus_Slave (only communication modules that support Modbus),MB_HOLD_REG points to a bit address that is not equal to n * 8,Check the MB_HOLD_REG pointer,Modbus,modbus,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8428
+category: Error - Modbus_Slave (only communication modules that support Modbus)
+error_type: Modbus
+description: MB_HOLD_REG points to a bit address that is not equal to n * 8
+remedy: Check the MB_HOLD_REG pointer"
+16#0094,RECEIVE status and error codes,"frame end identified based on the ""Receipt of fixed/maximum frame length""",,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#0094
+category: RECEIVE status and error codes
+error_type: PtP
+description: frame end identified based on the ""Receipt of fixed/maximum frame length""
+remedy:"
+16#0095,RECEIVE status and error codes,"frame end identified based on ""Message timeout""",,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#0095
+category: RECEIVE status and error codes
+error_type: PtP
+description: frame end identified based on ""Message timeout""
+remedy:"
+16#0096,RECEIVE status and error codes,"frame end identified based on expiration of the ""Character delay time""",,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#0096
+category: RECEIVE status and error codes
+error_type: PtP
+description: frame end identified based on expiration of the ""Character delay time""
+remedy:"
+16#0097,RECEIVE status and error codes,The frame was aborted because the maximum response time was reached.,,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#0097
+category: RECEIVE status and error codes
+error_type: PtP
+description: The frame was aborted because the maximum response time was reached.
+remedy:"
+16#0098,RECEIVE status and error codes,"frame end identified based on the fulfillment of the ""Read message length from message"" conditions",,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#0098
+category: RECEIVE status and error codes
+error_type: PtP
+description: frame end identified based on the fulfillment of the ""Read message length from message"" conditions
+remedy:"
+16#0099,RECEIVE status and error codes,"frame end identified based on the receipt of the ""End sequence""",,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#0099
+category: RECEIVE status and error codes
+error_type: PtP
+description: frame end identified based on the receipt of the ""End sequence""
+remedy:"
+16#7000,SEND status and error codes,Block idle,,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#7000
+category: SEND status and error codes
+error_type: PtP
+description: Block idle
+remedy:"
+16#7001,SEND status and error codes,Initial call for a new frame: Data transmission initiated,,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#7001
+category: SEND status and error codes
+error_type: PtP
+description: Initial call for a new frame: Data transmission initiated
+remedy:"
+16#7002,SEND status and error codes,Interim call: Data transmission running,,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#7002
+category: SEND status and error codes
+error_type: PtP
+description: Interim call: Data transmission running
+remedy:"
+16#8085,SEND status and error codes,Invalid length,Select a suitable frame length. The following are valid (depending on the module): 1-1024/2048/4096 (Byte),PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8085
+category: SEND status and error codes
+error_type: PtP
+description: Invalid length
+remedy: Select a suitable frame length. The following are valid (depending on the module): 1-1024/2048/4096 (Byte)"
+16#8088,SEND status and error codes | RECEIVE status and error codes,"The specified length exceeds the range set in the receive buffer. Note: If the data type STRING has been specified at the BUFFER parameter, this error code also appears if the current string is shorter than the length specified at the LENGTH parameter. | The number of characters received exceeds the number specified at the BUFFER parameter.",Change the range in the receive buffer or select a frame length which corresponds to the range set in the receive buffer. The following are valid (depending on the module): 1-1024/2048/4096 (bytes) | Select a suitable frame length. The following are valid (depending on the module): 1-1024/2048/4096 (bytes),PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8088
+category: SEND status and error codes | RECEIVE status and error codes
+error_type: PtP
+description: The specified length exceeds the range set in the receive buffer. Note: If the data type STRING has been specified at the BUFFER parameter, this error code also appears if the current string is shorter than the length specified at the LENGTH parameter. | The number of characters received exceeds the number specified at the BUFFER parameter.
+remedy: Change the range in the receive buffer or select a frame length which corresponds to the range set in the receive buffer. The following are valid (depending on the module): 1-1024/2048/4096 (bytes) | Select a suitable frame length. The following are valid (depending on the module): 1-1024/2048/4096 (bytes)"
+16#8090,SEND status and error codes | RECEIVE status and error codes,Configuration error: Odd number of bytes for WString,Select an even number of bytes.,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8090
+category: SEND status and error codes | RECEIVE status and error codes
+error_type: PtP
+description: Configuration error: Odd number of bytes for WString
+remedy: Select an even number of bytes."
+16#818F,Error message codes of the special functions,Incorrect parameter number setting (with USS only),Select a suitable parameter number (PARAM). The following numbers are valid: 0-2047,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#818F
+category: Error message codes of the special functions
+error_type: PtP
+description: Incorrect parameter number setting (with USS only)
+remedy: Select a suitable parameter number (PARAM). The following numbers are valid: 0-2047"
+16#8190,Error message codes of the special functions,Incorrect setting of the CRC calculation,Select a suitable value for the CRC calculation. The following are valid: deactivated or activated. Check whether the module addressed supports CRC calculation.,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8190
+category: Error message codes of the special functions
+error_type: PtP
+description: Incorrect setting of the CRC calculation
+remedy: Select a suitable value for the CRC calculation. The following are valid: deactivated or activated. Check whether the module addressed supports CRC calculation."
+16#8191,Error message codes of the special functions,Incorrect setting of the diagnostic error interrupt,"Select a suitable value for ""Diagnostic error interrupt"". The following are valid: Diagnostic error interrupt deactivated or diagnostic error interrupt activated. Check whether the module addressed supports the generation of diagnostic interrupts.",PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8191
+category: Error message codes of the special functions
+error_type: PtP
+description: Incorrect setting of the diagnostic error interrupt
+remedy: Select a suitable value for ""Diagnostic error interrupt"". The following are valid: Diagnostic error interrupt deactivated or diagnostic error interrupt activated. Check whether the module addressed supports the generation of diagnostic interrupts."
+16#81A0,"Error message codes of the ""Port configuration""",The module does not support this protocol.,Select a valid protocol for the module (PROTOCOL).,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81A0
+category: Error message codes of the ""Port configuration""
+error_type: PtP
+description: The module does not support this protocol.
+remedy: Select a valid protocol for the module (PROTOCOL)."
+16#81A1,"Error message codes of the ""Port configuration""",The module does not support this data transmission rate.,Select a valid data transmission rate for the module (BAUD).,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81A1
+category: Error message codes of the ""Port configuration""
+error_type: PtP
+description: The module does not support this data transmission rate.
+remedy: Select a valid data transmission rate for the module (BAUD)."
+16#81A2,"Error message codes of the ""Port configuration""",The module does not support this parity setting.,"Select a suitable value for ""Parity"" (PARITY). The following are valid: None (1) Even (2) Odd (3) Mark (4) Space (5) Any (6)",PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81A2
+category: Error message codes of the ""Port configuration""
+error_type: PtP
+description: The module does not support this parity setting.
+remedy: Select a suitable value for ""Parity"" (PARITY). The following are valid: None (1) Even (2) Odd (3) Mark (4) Space (5) Any (6)"
+16#81A3,"Error message codes of the ""Port configuration""",The module does not support this number of data bits.,"Select a suitable value for ""Number of data bits"" (DATABITS). The following are valid: 7 (2) 8 (1)",PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81A3
+category: Error message codes of the ""Port configuration""
+error_type: PtP
+description: The module does not support this number of data bits.
+remedy: Select a suitable value for ""Number of data bits"" (DATABITS). The following are valid: 7 (2) 8 (1)"
+16#81A4,"Error message codes of the ""Port configuration""",The module does not support this number of stop bits.,"Select a suitable value for ""Number of stop bits"" (STOPBITS). The following are valid: 1 (1) 2 (2)",PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81A4
+category: Error message codes of the ""Port configuration""
+error_type: PtP
+description: The module does not support this number of stop bits.
+remedy: Select a suitable value for ""Number of stop bits"" (STOPBITS). The following are valid: 1 (1) 2 (2)"
+16#81A5,"Error message codes of the ""Port configuration""",The module does not support this type of data flow control.,Select a valid data flow control for the module (FLOWCTRL).,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81A5
+category: Error message codes of the ""Port configuration""
+error_type: PtP
+description: The module does not support this type of data flow control.
+remedy: Select a valid data flow control for the module (FLOWCTRL)."
+16#81A7,"Error message codes of the ""Port configuration""",Invalid value for XON or XOFF,Select suitable values for XON (XONCHAR) and XOFF (XOFFCHAR). Valid range of values: 0...255,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81A7
+category: Error message codes of the ""Port configuration""
+error_type: PtP
+description: Invalid value for XON or XOFF
+remedy: Select suitable values for XON (XONCHAR) and XOFF (XOFFCHAR). Valid range of values: 0...255"
+16#81AA,"Error message codes of the ""Port configuration""",Invalid operating mode,Valid operating modes are: Full duplex (RS232) (0) Full duplex (RS422) four-wire mode (point-to-point) (1) / (CM PtP (ET 200SP)) Full duplex (RS422) four-wire mode (multipoint master) (2)/ (CM PtP (ET 200SP)) Full duplex (RS 422) four-wire mode (multipoint slave) (3) Half duplex (RS485) two-wire mode. (4),PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81AA
+category: Error message codes of the ""Port configuration""
+error_type: PtP
+description: Invalid operating mode
+remedy: Valid operating modes are: Full duplex (RS232) (0) Full duplex (RS422) four-wire mode (point-to-point) (1) / (CM PtP (ET 200SP)) Full duplex (RS422) four-wire mode (multipoint master) (2)/ (CM PtP (ET 200SP)) Full duplex (RS 422) four-wire mode (multipoint slave) (3) Half duplex (RS485) two-wire mode. (4)"
+16#81AB,"Error message codes of the ""Port configuration""",Invalid receive line initial state,"Valid initial states are: ""No"" default setting (0) Signal R(A)=5 V, signal R(B)=0 V (break detection) (1): Can only be selected with: ""Full duplex (RS422) four-wire mode (point-to-point connection)"" and ""Full duplex (RS422) four-wire mode (multipoint slave)"". Signal R(A)=0 V, signal R(B)=5 V (2): This default setting corresponds to the idle state (no active send operation).",PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81AB
+category: Error message codes of the ""Port configuration""
+error_type: PtP
+description: Invalid receive line initial state
+remedy: Valid initial states are: ""No"" default setting (0) Signal R(A)=5 V, signal R(B)=0 V (break detection) (1): Can only be selected with: ""Full duplex (RS422) four-wire mode (point-to-point connection)"" and ""Full duplex (RS422) four-wire mode (multipoint slave)"". Signal R(A)=0 V, signal R(B)=5 V (2): This default setting corresponds to the idle state (no active send operation)."
+16#81AC,"Error message codes of the ""Port configuration""","Invalid value for ""Break detection""","Select a suitable value for ""Break detection"". The following are valid: Break detection deactivated (0) Break detection activated (1).",PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81AC
+category: Error message codes of the ""Port configuration""
+error_type: PtP
+description: Invalid value for ""Break detection""
+remedy: Select a suitable value for ""Break detection"". The following are valid: Break detection deactivated (0) Break detection activated (1)."
+16#81AF,"Error message codes of the ""Port configuration""",The module does not support this protocol.,Select a valid protocol for the module.,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81AF
+category: Error message codes of the ""Port configuration""
+error_type: PtP
+description: The module does not support this protocol.
+remedy: Select a valid protocol for the module."
+16#81B5,"Error codes of the ""Send configuration""",More than two end delimiters or end sequence > 5 characters,"Select suitable values for ""End delimiter"" and ""End sequence"". The following are valid: deactivated (0), 1 (1) or 2 (2) end delimiters or deactivated (0), 1 (1) up to 5 (5) characters for the end sequence.",PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81B5
+category: Error codes of the ""Send configuration""
+error_type: PtP
+description: More than two end delimiters or end sequence > 5 characters
+remedy: Select suitable values for ""End delimiter"" and ""End sequence"". The following are valid: deactivated (0), 1 (1) or 2 (2) end delimiters or deactivated (0), 1 (1) up to 5 (5) characters for the end sequence."
+16#81B6,"Error codes of the ""Send configuration""",Send configuration rejected because the 3964(R) protocol was selected,Make sure that no send configuration is transmitted if the 3964(R) protocol is set.,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81B6
+category: Error codes of the ""Send configuration""
+error_type: PtP
+description: Send configuration rejected because the 3964(R) protocol was selected
+remedy: Make sure that no send configuration is transmitted if the 3964(R) protocol is set."
+16#81C0,"Error codes of the ""Receive configuration""",Invalid start condition,Select a suitable start condition. The following are valid: Send break before frame start Send Idle Line.,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81C0
+category: Error codes of the ""Receive configuration""
+error_type: PtP
+description: Invalid start condition
+remedy: Select a suitable start condition. The following are valid: Send break before frame start Send Idle Line."
+16#81C1,"Error codes of the ""Receive configuration""",Invalid end condition or no end condition selected,Select a suitable end condition (see Receiving data with Freeport (S7-1500)).,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81C1
+category: Error codes of the ""Receive configuration""
+error_type: PtP
+description: Invalid end condition or no end condition selected
+remedy: Select a suitable end condition (see Receiving data with Freeport (S7-1500))."
+16#81C3,"Error codes of the ""Receive configuration""","Invalid value for ""Maximum message length""","Select a suitable value for ""Maximum message length"" (MAXLEN). Valid range of values (depending on the module): 1-1024/2048/4096 (Byte)",PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81C3
+category: Error codes of the ""Receive configuration""
+error_type: PtP
+description: Invalid value for ""Maximum message length""
+remedy: Select a suitable value for ""Maximum message length"" (MAXLEN). Valid range of values (depending on the module): 1-1024/2048/4096 (Byte)"
+16#81C4,"Error codes of the ""Receive configuration""","Invalid value for ""Offset of the length specification in the message""","Select a suitable value for ""Offset of the length specification in the message"". Valid range of values (depending on the module): 1-1024/2048/4096 (Byte)",PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81C4
+category: Error codes of the ""Receive configuration""
+error_type: PtP
+description: Invalid value for ""Offset of the length specification in the message""
+remedy: Select a suitable value for ""Offset of the length specification in the message"". Valid range of values (depending on the module): 1-1024/2048/4096 (Byte)"
+16#81C5,"Error codes of the ""Receive configuration""","Invalid value for ""Size of length field""","Select a suitable value for ""Size of length field"" (LENGTHSIZE). Valid range of values in bytes: 1 (1) 2 (2) 4 (4)",PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81C5
+category: Error codes of the ""Receive configuration""
+error_type: PtP
+description: Invalid value for ""Size of length field""
+remedy: Select a suitable value for ""Size of length field"" (LENGTHSIZE). Valid range of values in bytes: 1 (1) 2 (2) 4 (4)"
+16#81C6,"Error codes of the ""Receive configuration""","Invalid value for ""Number of characters not counted in length specification""","Select a suitable value for ""Number of characters not counted in length specification"" (LENGTHM). Valid range of values: 0 to 255 (bytes)",PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81C6
+category: Error codes of the ""Receive configuration""
+error_type: PtP
+description: Invalid value for ""Number of characters not counted in length specification""
+remedy: Select a suitable value for ""Number of characters not counted in length specification"" (LENGTHM). Valid range of values: 0 to 255 (bytes)"
+16#81C7,"Error codes of the ""Receive configuration""","The total of ""Offset in the message + size of length field + number of characters not counted"" is greater than the maximum frame length","Select a suitable value for ""Offset in message"", ""Size of length field"" and ""Number of characters not counted"". Valid range of values: Offset in the message (depending on the module): 0-1024/2048/4096 (bytes) Size of length field: 1, 2, or 4 (bytes) Number of characters not counted: 0 to 255 (bytes)",PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81C7
+category: Error codes of the ""Receive configuration""
+error_type: PtP
+description: The total of ""Offset in the message + size of length field + number of characters not counted"" is greater than the maximum frame length
+remedy: Select a suitable value for ""Offset in message"", ""Size of length field"" and ""Number of characters not counted"". Valid range of values: Offset in the message (depending on the module): 0-1024/2048/4096 (bytes) Size of length field: 1, 2, or 4 (bytes) Number of characters not counted: 0 to 255 (bytes)"
+16#81C8,"Error codes of the ""Receive configuration""","Invalid value for ""Response timeout""","Select a suitable value for ""Response timeout"". Valid range of values: 1-65535 (ms)",PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81C8
+category: Error codes of the ""Receive configuration""
+error_type: PtP
+description: Invalid value for ""Response timeout""
+remedy: Select a suitable value for ""Response timeout"". Valid range of values: 1-65535 (ms)"
+16#81C9,"Error codes of the ""Receive configuration""","Invalid value for ""Character delay time""","Select a suitable value for ""Character delay time"". Valid range of values: 1 to 65535 (bit times)",PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81C9
+category: Error codes of the ""Receive configuration""
+error_type: PtP
+description: Invalid value for ""Character delay time""
+remedy: Select a suitable value for ""Character delay time"". Valid range of values: 1 to 65535 (bit times)"
+16#81CB,"Error codes of the ""Receive configuration""","frame end sequence is activated, but no character is activated for the check",Activate one or several characters for the check.,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81CB
+category: Error codes of the ""Receive configuration""
+error_type: PtP
+description: frame end sequence is activated, but no character is activated for the check
+remedy: Activate one or several characters for the check."
+16#81CC,"Error codes of the ""Receive configuration""","frame start sequence is activated, but no character is activated for the check",Activate one or several characters for the check.,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81CC
+category: Error codes of the ""Receive configuration""
+error_type: PtP
+description: frame start sequence is activated, but no character is activated for the check
+remedy: Activate one or several characters for the check."
+16#81CD,"Error codes of the ""Receive configuration""","Invalid value for ""Prevent overwriting""","Select a suitable value for ""Prevent overwriting"". The following are valid: Prevent overwriting is deactivated (0) or Prevent overwriting is activated (1)",PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81CD
+category: Error codes of the ""Receive configuration""
+error_type: PtP
+description: Invalid value for ""Prevent overwriting""
+remedy: Select a suitable value for ""Prevent overwriting"". The following are valid: Prevent overwriting is deactivated (0) or Prevent overwriting is activated (1)"
+16#81CE,"Error codes of the ""Receive configuration""","Invalid value for ""Clear receive buffer on startup""","Select a suitable value for ""Clear receive buffer on startup"". The following are valid: Clear receive buffer at startup is deactivated (0) Clear receive buffer at startup is activated (1)",PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81CE
+category: Error codes of the ""Receive configuration""
+error_type: PtP
+description: Invalid value for ""Clear receive buffer on startup""
+remedy: Select a suitable value for ""Clear receive buffer on startup"". The following are valid: Clear receive buffer at startup is deactivated (0) Clear receive buffer at startup is activated (1)"
+16#81D0,SEND status and error codes,Receiving send request during runtime of a send command,Make sure that you do not receive an additional send request during runtime of a send command.,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81D0
+category: SEND status and error codes
+error_type: PtP
+description: Receiving send request during runtime of a send command
+remedy: Make sure that you do not receive an additional send request during runtime of a send command."
+16#81D1,SEND status and error codes,The waiting time for XON or CTS = ON has expired.,"The communication partner has a fault, is too slow or is offline. Check the communication partner or change the parameters, if necessary.",PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81D1
+category: SEND status and error codes
+error_type: PtP
+description: The waiting time for XON or CTS = ON has expired.
+remedy: The communication partner has a fault, is too slow or is offline. Check the communication partner or change the parameters, if necessary."
+16#81D2,SEND status and error codes,"""Hardware RTS always ON"": Send job canceled due to change from DSR = ON to OFF",Check the communication partner. Make sure that DSR is ON for the entire duration of transmission.,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81D2
+category: SEND status and error codes
+error_type: PtP
+description: ""Hardware RTS always ON"": Send job canceled due to change from DSR = ON to OFF
+remedy: Check the communication partner. Make sure that DSR is ON for the entire duration of transmission."
+16#81D3,SEND status and error codes,Send buffer overflow / send frame too long,Select a shorter frame length. The following are valid (depending on the module): 1 to 1024/2048/4096 (bytes),PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81D3
+category: SEND status and error codes
+error_type: PtP
+description: Send buffer overflow / send frame too long
+remedy: Select a shorter frame length. The following are valid (depending on the module): 1 to 1024/2048/4096 (bytes)"
+16#81D5,SEND status and error codes,"Transmission canceled due to parameter changes, detected wire break, or CPU in STOP","Check the parameter assignment, wire break, and CPU status.",PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81D5
+category: SEND status and error codes
+error_type: PtP
+description: Transmission canceled due to parameter changes, detected wire break, or CPU in STOP
+remedy: Check the parameter assignment, wire break, and CPU status."
+16#81D6,SEND status and error codes,Transmission canceled because end identifier was not received,Check the parameter assignment of the end characters and the frame of the communication partner.,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81D6
+category: SEND status and error codes
+error_type: PtP
+description: Transmission canceled because end identifier was not received
+remedy: Check the parameter assignment of the end characters and the frame of the communication partner."
+16#81D7,SEND status and error codes,Communication error between the user program and module,"Check the communication (e.g., matching the sequence number).",PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81D7
+category: SEND status and error codes
+error_type: PtP
+description: Communication error between the user program and module
+remedy: Check the communication (e.g., matching the sequence number)."
+16#81D8,SEND status and error codes,Transmission attempt rejected because module is not configured,Configure the module.,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81D8
+category: SEND status and error codes
+error_type: PtP
+description: Transmission attempt rejected because module is not configured
+remedy: Configure the module."
+16#81E0,Error codes of the receive configuration,Frame aborted: Send buffer overflow / send frame too long,Increase the call rate for the receive function in the user program or configure communication with data flow control.,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81E0
+category: Error codes of the receive configuration
+error_type: PtP
+description: Frame aborted: Send buffer overflow / send frame too long
+remedy: Increase the call rate for the receive function in the user program or configure communication with data flow control."
+16#81E1,Error codes of the receive configuration,Frame aborted: Parity error,"Check the connection line of the communication partners, or verify that the same data transmission rate, parity and stop bit number are configured for both devices.",PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81E1
+category: Error codes of the receive configuration
+error_type: PtP
+description: Frame aborted: Parity error
+remedy: Check the connection line of the communication partners, or verify that the same data transmission rate, parity and stop bit number are configured for both devices."
+16#81E2,Error codes of the receive configuration,Frame aborted: Character frame error,"Check the settings for start bit, data bits, parity bit, data transmission rate, and stop bit(s).",PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81E2
+category: Error codes of the receive configuration
+error_type: PtP
+description: Frame aborted: Character frame error
+remedy: Check the settings for start bit, data bits, parity bit, data transmission rate, and stop bit(s)."
+16#81E3,Error codes of the receive configuration,Frame aborted: Character overflow error,Firmware error: Please contact Customer Support.,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81E3
+category: Error codes of the receive configuration
+error_type: PtP
+description: Frame aborted: Character overflow error
+remedy: Firmware error: Please contact Customer Support."
+16#81E4,Error codes of the receive configuration,"Frame aborted: The total length of ""Offset in the message + size of the length field + number of characters not counted"" is greater than the receive buffer","Select a suitable value for offset in message, size of the length field, and number of characters not counted.",PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81E4
+category: Error codes of the receive configuration
+error_type: PtP
+description: Frame aborted: The total length of ""Offset in the message + size of the length field + number of characters not counted"" is greater than the receive buffer
+remedy: Select a suitable value for offset in message, size of the length field, and number of characters not counted."
+16#81E5,Error codes of the receive configuration,Frame aborted: Break,Receive line to partner is interrupted. Reconnect or switch on partner.,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81E5
+category: Error codes of the receive configuration
+error_type: PtP
+description: Frame aborted: Break
+remedy: Receive line to partner is interrupted. Reconnect or switch on partner."
+16#81E6,Error codes of the receive configuration,"Maximum number of ""Buffered received frames"" exceeded",In the user program call the instruction more often or configure a communication with data flow control or increase the number of buffered frames.,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81E6
+category: Error codes of the receive configuration
+error_type: PtP
+description: Maximum number of ""Buffered received frames"" exceeded
+remedy: In the user program call the instruction more often or configure a communication with data flow control or increase the number of buffered frames."
+16#81E7,Error codes of the receive configuration,Synchronization error module and Receive_P2P,Make sure that different instances of the Receive_P2P do not access the same module.,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81E7
+category: Error codes of the receive configuration
+error_type: PtP
+description: Synchronization error module and Receive_P2P
+remedy: Make sure that different instances of the Receive_P2P do not access the same module."
+16#81E8,Error codes of the receive configuration,Frame aborted: The character delay time has expired before the message end criterion was detected,"Partner device faulty or too slow. Check this, if required, using an interface tester that is interconnected in the transmission line.",PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81E8
+category: Error codes of the receive configuration
+error_type: PtP
+description: Frame aborted: The character delay time has expired before the message end criterion was detected
+remedy: Partner device faulty or too slow. Check this, if required, using an interface tester that is interconnected in the transmission line."
+16#81E9,Error codes of the receive configuration,Modbus CRC error (only communication modules which support Modbus),Checksum error of the Modbus frame. Check the communication partner.,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81E9
+category: Error codes of the receive configuration
+error_type: PtP
+description: Modbus CRC error (only communication modules which support Modbus)
+remedy: Checksum error of the Modbus frame. Check the communication partner."
+16#81EA,Error codes of the receive configuration,Modbus frame too short (only communication modules which support Modbus),Minimum length of Modbus frame not met. Check the communication partner.,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81EA
+category: Error codes of the receive configuration
+error_type: PtP
+description: Modbus frame too short (only communication modules which support Modbus)
+remedy: Minimum length of Modbus frame not met. Check the communication partner."
+16#81EB,Error codes of the receive configuration,Frame aborted: Maximum frame length reached,Select a shorter frame length at the communication partner. The following are valid (depending on the module): 1-1024/2048/4096 (bytes) Check the parameters for end of frame detection.,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81EB
+category: Error codes of the receive configuration
+error_type: PtP
+description: Frame aborted: Maximum frame length reached
+remedy: Select a shorter frame length at the communication partner. The following are valid (depending on the module): 1-1024/2048/4096 (bytes) Check the parameters for end of frame detection."
+16#81F0,Error codes V24 accompanying signals,The module does not support V24 accompanying signals,You have tried to set accompanying signals for a module that does not support V24 accompanying signals. Make sure that this is an RS232 module or that RS232 mode (ET 200SP) is set.,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81F0
+category: Error codes V24 accompanying signals
+error_type: PtP
+description: The module does not support V24 accompanying signals
+remedy: You have tried to set accompanying signals for a module that does not support V24 accompanying signals. Make sure that this is an RS232 module or that RS232 mode (ET 200SP) is set."
+16#81F1,Error codes V24 accompanying signals,No operation of the V24 accompanying signals,The V24 accompanying signals cannot be operated manually if hardware data flow control is active.,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81F1
+category: Error codes V24 accompanying signals
+error_type: PtP
+description: No operation of the V24 accompanying signals
+remedy: The V24 accompanying signals cannot be operated manually if hardware data flow control is active."
+16#81F2,Error codes V24 accompanying signals,The DSR signal cannot be set because the module has the type DTE.,Check the configured type of the module. The module type must be DCE (data communication equipment).,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81F2
+category: Error codes V24 accompanying signals
+error_type: PtP
+description: The DSR signal cannot be set because the module has the type DTE.
+remedy: Check the configured type of the module. The module type must be DCE (data communication equipment)."
+16#81F3,Error codes V24 accompanying signals,The DTR signal cannot be set because the module has the type DCE.,Check the configured type of the module. The module type must be DTE (data terminal equipment).,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81F3
+category: Error codes V24 accompanying signals
+error_type: PtP
+description: The DTR signal cannot be set because the module has the type DCE.
+remedy: Check the configured type of the module. The module type must be DTE (data terminal equipment)."
+16#81F4,Error codes V24 accompanying signals,Block header error (e.g. incorrect block type or incorrect block length),Check the instance DB and the block header.,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#81F4
+category: Error codes V24 accompanying signals
+error_type: PtP
+description: Block header error (e.g. incorrect block type or incorrect block length)
+remedy: Check the instance DB and the block header."
+16#8201,Error codes of the receive configuration,Receive_Conditions is a pointer to an invalid data type,"Enter a pointer to one of the following data types: DB, BOOL, BYTE, CHAR, WORD, INT, DWORD, DINT, REAL, DATE, TIME_OF_DAY, TIME, S5TIME, DATE_AND_TIME, STRING",PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8201
+category: Error codes of the receive configuration
+error_type: PtP
+description: Receive_Conditions is a pointer to an invalid data type
+remedy: Enter a pointer to one of the following data types: DB, BOOL, BYTE, CHAR, WORD, INT, DWORD, DINT, REAL, DATE, TIME_OF_DAY, TIME, S5TIME, DATE_AND_TIME, STRING"
+16#8225,Error codes of the receive configuration,Receive_Conditionspoints to an optimized memory area greater than 1 kB or Receive_Conditions points to an optimized memory area and the receive length is greater than the area addressed by Receive_Conditions.,"Enter a pointer to an area with a maximum length of: Optimized memory area: 1 KB Non-optimized memory area: 4 KB Note: If the pointer points to an optimized memory area, do not send more than 1 KB.",PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8225
+category: Error codes of the receive configuration
+error_type: PtP
+description: Receive_Conditionspoints to an optimized memory area greater than 1 kB or Receive_Conditions points to an optimized memory area and the receive length is greater than the area addressed by Receive_Conditions.
+remedy: Enter a pointer to an area with a maximum length of: Optimized memory area: 1 KB Non-optimized memory area: 4 KB Note: If the pointer points to an optimized memory area, do not send more than 1 KB."
+16#8229,Error codes of the receive configuration,Receive_Conditions is a pointer to BOOL with a number of bits not equal to n * 8,"If you are using a pointer to BOOL, the number of bits must be a multiple of 8.",PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8229
+category: Error codes of the receive configuration
+error_type: PtP
+description: Receive_Conditions is a pointer to BOOL with a number of bits not equal to n * 8
+remedy: If you are using a pointer to BOOL, the number of bits must be a multiple of 8."
+16#82C1,Error codes of the receive configuration,"Invalid value for ""Buffered received frames"".","Select a suitable value for ""Buffered received frames"". Valid range of values: 1-255",PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#82C1
+category: Error codes of the receive configuration
+error_type: PtP
+description: Invalid value for ""Buffered received frames"".
+remedy: Select a suitable value for ""Buffered received frames"". Valid range of values: 1-255"
+16#82C2,Error codes of the receive configuration,Receive configuration rejected because the 3964(R) protocol was selected,Make sure that no receive configuration is sent if the 3964(R) protocol is set.,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#82C2
+category: Error codes of the receive configuration
+error_type: PtP
+description: Receive configuration rejected because the 3964(R) protocol was selected
+remedy: Make sure that no receive configuration is sent if the 3964(R) protocol is set."
+16#8301,Error codes of the receive configuration,Receive_Conditions is a pointer to an invalid data type,"Select a valid data type. The following are valid: DB, BOOL, BYTE, CHAR, WORD, INT, DWORD, DINT, REAL, DATE, TIME_OF_DAY, TIME, S5TIME, DATE_AND_TIME, STRING",PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8301
+category: Error codes of the receive configuration
+error_type: PtP
+description: Receive_Conditions is a pointer to an invalid data type
+remedy: Select a valid data type. The following are valid: DB, BOOL, BYTE, CHAR, WORD, INT, DWORD, DINT, REAL, DATE, TIME_OF_DAY, TIME, S5TIME, DATE_AND_TIME, STRING"
+16#8322,Error codes of the receive configuration,Range length error when reading a parameter,Check the input at the Receive_Conditions parameter,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8322
+category: Error codes of the receive configuration
+error_type: PtP
+description: Range length error when reading a parameter
+remedy: Check the input at the Receive_Conditions parameter"
+16#8324,Error codes of the receive configuration,Range error when reading a parameter,Check the input at the Receive_Conditions parameter,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8324
+category: Error codes of the receive configuration
+error_type: PtP
+description: Range error when reading a parameter
+remedy: Check the input at the Receive_Conditions parameter"
+16#8328,Error codes of the receive configuration | SEND status and error codes,Setting error when reading a parameter | BUFFER is a pointer to BOOL with a number of bits not equal to n * 8,"Check the input at the Receive_Conditions parameter | If you are using a pointer to BOOL, the number of bits must be a multiple of 8.",PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8328
+category: Error codes of the receive configuration | SEND status and error codes
+error_type: PtP
+description: Setting error when reading a parameter | BUFFER is a pointer to BOOL with a number of bits not equal to n * 8
+remedy: Check the input at the Receive_Conditions parameter | If you are using a pointer to BOOL, the number of bits must be a multiple of 8."
+16#8332,Error codes of the receive configuration,Invalid data block at the Receive_Conditions parameter,Check the input at the Receive_Conditions parameter,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8332
+category: Error codes of the receive configuration
+error_type: PtP
+description: Invalid data block at the Receive_Conditions parameter
+remedy: Check the input at the Receive_Conditions parameter"
+16#833A,Error codes of the receive configuration,The designation of the data block at the Receive_Conditions parameter refers to a data block which is not loaded.,Check the input at the Receive_Conditions parameter,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#833A
+category: Error codes of the receive configuration
+error_type: PtP
+description: The designation of the data block at the Receive_Conditions parameter refers to a data block which is not loaded.
+remedy: Check the input at the Receive_Conditions parameter"
+16#8351,Error codes of the receive configuration,Invalid data type,Check the input at the Receive_Conditions parameter,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8351
+category: Error codes of the receive configuration
+error_type: PtP
+description: Invalid data type
+remedy: Check the input at the Receive_Conditions parameter"
+16#8352,Error codes of the receive configuration,Receive_Conditions does not point to a data block,Check the pointer to Receive_Conditions,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8352
+category: Error codes of the receive configuration
+error_type: PtP
+description: Receive_Conditions does not point to a data block
+remedy: Check the pointer to Receive_Conditions"
+16#8353,Error codes of the receive configuration,Receive_Conditions does not point to a structure of the typeReceive_Conditions,Check the pointer to Receive_Conditions,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8353
+category: Error codes of the receive configuration
+error_type: PtP
+description: Receive_Conditions does not point to a structure of the typeReceive_Conditions
+remedy: Check the pointer to Receive_Conditions"
+16#8389,Error codes 3964(R) protocol,Runtime error: Invalid character received while waiting for free receive buffer,"The send request of the communication partner (STX, 02H) is only answered with DLE when the receive buffer is empty. No additional character may be received before (except STX again). Check for proper function at the partner device, possibly by using an interface test device that is switched into the transmission line.",PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8389
+category: Error codes 3964(R) protocol
+error_type: PtP
+description: Runtime error: Invalid character received while waiting for free receive buffer
+remedy: The send request of the communication partner (STX, 02H) is only answered with DLE when the receive buffer is empty. No additional character may be received before (except STX again). Check for proper function at the partner device, possibly by using an interface test device that is switched into the transmission line."
+16#838A,Error codes 3964(R) protocol,"Runtime error: Logical error during receiving. After DLE was received, a further random character (other than DLE or ETX) was received.","Check if partner DLE in frame header and in data string is always in duplicate or the connection is released with DLE ETX. Check for proper function at the partner device, possibly by using an interface test device that is switched into the transmission line.",PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#838A
+category: Error codes 3964(R) protocol
+error_type: PtP
+description: Runtime error: Logical error during receiving. After DLE was received, a further random character (other than DLE or ETX) was received.
+remedy: Check if partner DLE in frame header and in data string is always in duplicate or the connection is released with DLE ETX. Check for proper function at the partner device, possibly by using an interface test device that is switched into the transmission line."
+16#838B,Error codes 3964(R) protocol,Runtime error: Character delay time exceeded,"Partner device too slow or faulty. Verify by using an interface test device that is switched into the transmission line, if necessary.",PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#838B
+category: Error codes 3964(R) protocol
+error_type: PtP
+description: Runtime error: Character delay time exceeded
+remedy: Partner device too slow or faulty. Verify by using an interface test device that is switched into the transmission line, if necessary."
+16#838C,Error codes 3964(R) protocol,Runtime error: Wait time for free receive buffer has started,In the user program call the instruction more often or configure a communication with data flow control.,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#838C
+category: Error codes 3964(R) protocol
+error_type: PtP
+description: Runtime error: Wait time for free receive buffer has started
+remedy: In the user program call the instruction more often or configure a communication with data flow control."
+16#838D,Error codes 3964(R) protocol,Runtime error: frame repetition does not start within 4 s after NAK,Check the communication partner. A received frame that is possibly corrupted must be repeated by the partner within 4 seconds.,PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#838D
+category: Error codes 3964(R) protocol
+error_type: PtP
+description: Runtime error: frame repetition does not start within 4 s after NAK
+remedy: Check the communication partner. A received frame that is possibly corrupted must be repeated by the partner within 4 seconds."
+16#838E,Error codes 3964(R) protocol,"Runtime error: In idle mode, one or several characters (other than NAK or STX) were received.","Check for proper function of the partner device, possibly using an interface test device that is switched into the transmission line.",PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#838E
+category: Error codes 3964(R) protocol
+error_type: PtP
+description: Runtime error: In idle mode, one or several characters (other than NAK or STX) were received.
+remedy: Check for proper function of the partner device, possibly using an interface test device that is switched into the transmission line."
+16#838F,Error codes 3964(R) protocol,Runtime error: Initialization conflict - Both partners have set high priority,"Set the ""Low"" priority at one of the partners",PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#838F
+category: Error codes 3964(R) protocol
+error_type: PtP
+description: Runtime error: Initialization conflict - Both partners have set high priority
+remedy: Set the ""Low"" priority at one of the partners"
+16#8391,Error codes 3964(R) protocol,Parameter assignment error: 3964 configuration data rejected because Freeport is set,"If the Freeport protocol is set, make sure that no 3964 parameter assignment data is sent.",PtP,ptp,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8391
+category: Error codes 3964(R) protocol
+error_type: PtP
+description: Parameter assignment error: 3964 configuration data rejected because Freeport is set
+remedy: If the Freeport protocol is set, make sure that no 3964 parameter assignment data is sent."
+16#8185,,Addressing error,Valid drive address range: 1 to 16,USS,uss,2026-08-03T05:55:44.811900+00:00,"error_code: 16#8185
+category: 
+error_type: USS
+description: Addressing error
+remedy: Valid drive address range: 1 to 16"
+16#818E,,The drive was not initialized.,Check the user program and make sure that the USS_Drive_Control instruction is called for this drive.,USS,uss,2026-08-03T05:55:44.811900+00:00,"error_code: 16#818E
+category: 
+error_type: USS
+description: The drive was not initialized.
+remedy: Check the user program and make sure that the USS_Drive_Control instruction is called for this drive."

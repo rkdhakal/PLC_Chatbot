@@ -1,0 +1,27 @@
+# Environment
+.env
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+env/
+venv/
+.venv/
+
+# Large generated files
+backend/preprocessing/dataWithEmbeddings.csv
+backend/preprocessing/error_codes_faiss.index
+backend/preprocessing/error_codes_with_embeddings.csv
+
+# Logs
+backend/preprocessing/query_log.csv
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,59 @@
+timestamp,action,row_index,field,before,after,reason
+2026-08-03T05:55:44.811900+00:00,LOAD,all,source,3 files,187 rows,"Initial load from Modbus, PtP, USS sources"
+2026-08-03T05:55:44.811900+00:00,FIX_ERROR_CODE,14,error_code,16#8452 1),16#8452,Removed trailing ' 1)' suffix and normalised case
+2026-08-03T05:55:44.811900+00:00,FIX_ERROR_CODE,15,error_code,16#8453 1),16#8453,Removed trailing ' 1)' suffix and normalised case
+2026-08-03T05:55:44.811900+00:00,FIX_ERROR_CODE,16,error_code,16#8454 1),16#8454,Removed trailing ' 1)' suffix and normalised case
+2026-08-03T05:55:44.811900+00:00,FIX_ERROR_CODE,17,error_code,16#8455 1),16#8455,Removed trailing ' 1)' suffix and normalised case
+2026-08-03T05:55:44.811900+00:00,FIX_ERROR_CODE,18,error_code,16#8456 1),16#8456,Removed trailing ' 1)' suffix and normalised case
+2026-08-03T05:55:44.811900+00:00,FIX_ERROR_CODE,54,error_code,16#8828 1),16#8828,Removed trailing ' 1)' suffix and normalised case
+2026-08-03T05:55:44.811900+00:00,FIX_ERROR_CODE,55,error_code,16#8852 1),16#8852,Removed trailing ' 1)' suffix and normalised case
+2026-08-03T05:55:44.811900+00:00,FIX_ERROR_CODE,56,error_code,16#8853 1),16#8853,Removed trailing ' 1)' suffix and normalised case
+2026-08-03T05:55:44.811900+00:00,FIX_ERROR_CODE,57,error_code,16#8855 1),16#8855,Removed trailing ' 1)' suffix and normalised case
+2026-08-03T05:55:44.811900+00:00,FIX_ERROR_CODE,58,error_code,16#8856 1),16#8856,Removed trailing ' 1)' suffix and normalised case
+2026-08-03T05:55:44.811900+00:00,FIX_ERROR_CODE,59,error_code,16#8428 1),16#8428,Removed trailing ' 1)' suffix and normalised case
+2026-08-03T05:55:44.811900+00:00,FIX_ERROR_CODE,60,error_code,16#8452 1),16#8452,Removed trailing ' 1)' suffix and normalised case
+2026-08-03T05:55:44.811900+00:00,FIX_ERROR_CODE,61,error_code,16#8453 1),16#8453,Removed trailing ' 1)' suffix and normalised case
+2026-08-03T05:55:44.811900+00:00,FIX_ERROR_CODE,62,error_code,16#8454 1),16#8454,Removed trailing ' 1)' suffix and normalised case
+2026-08-03T05:55:44.811900+00:00,FIX_ERROR_CODE,63,error_code,16#8455 1),16#8455,Removed trailing ' 1)' suffix and normalised case
+2026-08-03T05:55:44.811900+00:00,FIX_ERROR_CODE,64,error_code,16#8456 1),16#8456,Removed trailing ' 1)' suffix and normalised case
+2026-08-03T05:55:44.811900+00:00,FIX_ERROR_CODE,134,error_code,16#8201 1),16#8201,Removed trailing ' 1)' suffix and normalised case
+2026-08-03T05:55:44.811900+00:00,FIX_ERROR_CODE,136,error_code,16#8229 1),16#8229,Removed trailing ' 1)' suffix and normalised case
+2026-08-03T05:55:44.811900+00:00,FIX_ERROR_CODE,142,error_code,16#8301 1),16#8301,Removed trailing ' 1)' suffix and normalised case
+2026-08-03T05:55:44.811900+00:00,FIX_ERROR_CODE,146,error_code,16#8328 1),16#8328,Removed trailing ' 1)' suffix and normalised case
+2026-08-03T05:55:44.811900+00:00,FIX_ERROR_CODE,150,error_code,16#8352 1),16#8352,Removed trailing ' 1)' suffix and normalised case
+2026-08-03T05:55:44.811900+00:00,FIX_ERROR_CODE,151,error_code,16#8353 1),16#8353,Removed trailing ' 1)' suffix and normalised case
+2026-08-03T05:55:44.811900+00:00,MERGE_DUPLICATES,"[0, 65, 169]",error_code,3 rows,1 merged row,'16#0000' appeared in 3 rows across categories
+2026-08-03T05:55:44.811900+00:00,MERGE_DUPLICATES,"[1, 171]",error_code,2 rows,1 merged row,'16#8181' appeared in 2 rows across categories
+2026-08-03T05:55:44.811900+00:00,MERGE_DUPLICATES,"[2, 172]",error_code,2 rows,1 merged row,'16#8182' appeared in 2 rows across categories
+2026-08-03T05:55:44.811900+00:00,MERGE_DUPLICATES,"[3, 173]",error_code,2 rows,1 merged row,'16#8183' appeared in 2 rows across categories
+2026-08-03T05:55:44.811900+00:00,MERGE_DUPLICATES,"[4, 174]",error_code,2 rows,1 merged row,'16#8184' appeared in 2 rows across categories
+2026-08-03T05:55:44.811900+00:00,MERGE_DUPLICATES,"[5, 12, 27, 137, 185]",error_code,5 rows,1 merged row,'16#8280' appeared in 5 rows across categories
+2026-08-03T05:55:44.811900+00:00,MERGE_DUPLICATES,"[6, 13, 28, 138, 186]",error_code,5 rows,1 merged row,'16#8281' appeared in 5 rows across categories
+2026-08-03T05:55:44.811900+00:00,MERGE_DUPLICATES,"[7, 139]",error_code,2 rows,1 merged row,'16#8282' appeared in 2 rows across categories
+2026-08-03T05:55:44.811900+00:00,MERGE_DUPLICATES,"[8, 20, 176]",error_code,3 rows,1 merged row,'16#8186' appeared in 3 rows across categories
+2026-08-03T05:55:44.811900+00:00,MERGE_DUPLICATES,"[9, 177]",error_code,2 rows,1 merged row,'16#8187' appeared in 2 rows across categories
+2026-08-03T05:55:44.811900+00:00,MERGE_DUPLICATES,"[10, 21, 178]",error_code,3 rows,1 merged row,'16#8188' appeared in 3 rows across categories
+2026-08-03T05:55:44.811900+00:00,MERGE_DUPLICATES,"[11, 25, 182]",error_code,3 rows,1 merged row,'16#818C' appeared in 3 rows across categories
+2026-08-03T05:55:44.811900+00:00,MERGE_DUPLICATES,"[14, 60]",error_code,2 rows,1 merged row,'16#8452' appeared in 2 rows across categories
+2026-08-03T05:55:44.811900+00:00,MERGE_DUPLICATES,"[15, 61]",error_code,2 rows,1 merged row,'16#8453' appeared in 2 rows across categories
+2026-08-03T05:55:44.811900+00:00,MERGE_DUPLICATES,"[16, 62]",error_code,2 rows,1 merged row,'16#8454' appeared in 2 rows across categories
+2026-08-03T05:55:44.811900+00:00,MERGE_DUPLICATES,"[17, 63]",error_code,2 rows,1 merged row,'16#8455' appeared in 2 rows across categories
+2026-08-03T05:55:44.811900+00:00,MERGE_DUPLICATES,"[18, 64]",error_code,2 rows,1 merged row,'16#8456' appeared in 2 rows across categories
+2026-08-03T05:55:44.811900+00:00,MERGE_DUPLICATES,"[19, 170]",error_code,2 rows,1 merged row,'16#8180' appeared in 2 rows across categories
+2026-08-03T05:55:44.811900+00:00,MERGE_DUPLICATES,"[22, 179]",error_code,2 rows,1 merged row,'16#8189' appeared in 2 rows across categories
+2026-08-03T05:55:44.811900+00:00,MERGE_DUPLICATES,"[23, 180]",error_code,2 rows,1 merged row,'16#818A' appeared in 2 rows across categories
+2026-08-03T05:55:44.811900+00:00,MERGE_DUPLICATES,"[24, 181]",error_code,2 rows,1 merged row,'16#818B' appeared in 2 rows across categories
+2026-08-03T05:55:44.811900+00:00,MERGE_DUPLICATES,"[26, 183]",error_code,2 rows,1 merged row,'16#818D' appeared in 2 rows across categories
+2026-08-03T05:55:44.811900+00:00,MERGE_DUPLICATES,"[39, 45, 152]",error_code,3 rows,1 merged row,'16#8380' appeared in 3 rows across categories
+2026-08-03T05:55:44.811900+00:00,MERGE_DUPLICATES,"[40, 46, 153]",error_code,3 rows,1 merged row,'16#8381' appeared in 3 rows across categories
+2026-08-03T05:55:44.811900+00:00,MERGE_DUPLICATES,"[41, 47, 154]",error_code,3 rows,1 merged row,'16#8382' appeared in 3 rows across categories
+2026-08-03T05:55:44.811900+00:00,MERGE_DUPLICATES,"[42, 48, 155]",error_code,3 rows,1 merged row,'16#8383' appeared in 3 rows across categories
+2026-08-03T05:55:44.811900+00:00,MERGE_DUPLICATES,"[43, 49, 156]",error_code,3 rows,1 merged row,'16#8384' appeared in 3 rows across categories
+2026-08-03T05:55:44.811900+00:00,MERGE_DUPLICATES,"[44, 50, 157]",error_code,3 rows,1 merged row,'16#8385' appeared in 3 rows across categories
+2026-08-03T05:55:44.811900+00:00,MERGE_DUPLICATES,"[51, 158]",error_code,2 rows,1 merged row,'16#8386' appeared in 2 rows across categories
+2026-08-03T05:55:44.811900+00:00,MERGE_DUPLICATES,"[52, 159]",error_code,2 rows,1 merged row,'16#8387' appeared in 2 rows across categories
+2026-08-03T05:55:44.811900+00:00,MERGE_DUPLICATES,"[53, 160]",error_code,2 rows,1 merged row,'16#8388' appeared in 2 rows across categories
+2026-08-03T05:55:44.811900+00:00,MERGE_DUPLICATES,"[76, 78]",error_code,2 rows,1 merged row,'16#8088' appeared in 2 rows across categories
+2026-08-03T05:55:44.811900+00:00,MERGE_DUPLICATES,"[77, 79]",error_code,2 rows,1 merged row,'16#8090' appeared in 2 rows across categories
+2026-08-03T05:55:44.811900+00:00,MERGE_DUPLICATES,"[145, 146]",error_code,2 rows,1 merged row,'16#8328' appeared in 2 rows across categories
+2026-08-03T05:55:44.811900+00:00,WARN_EMPTY,multiple,remedy,10 empty,unfilled,Manual review recommended
